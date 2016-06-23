@@ -1,0 +1,315 @@
+2016-06-23 01:28:45,885 [Worker-8] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1018) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[na:na]
+	at org.eclipse.sisu.wire.EntrySetAdapter$ValueIterator.next(EntrySetAdapter.java:102) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositoryConnectorProvider.newRepositoryConnector(DefaultRepositoryConnectorProvider.java:103) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:516) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:287) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:218) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:202) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal(DefaultPluginDependenciesResolver.java:202) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:149) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.project.registry.EclipsePluginDependenciesResolver.resolve(EclipsePluginDependenciesResolver.java:59) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.resolveExtensionArtifacts(DefaultMavenPluginManager.java:940) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupExtensionsRealm(DefaultMavenPluginManager.java:867) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuildingHelper.createProjectRealm(DefaultProjectBuildingHelper.java:196) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultModelBuildingListener.buildExtensionsAssembled(DefaultModelBuildingListener.java:111) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.ModelBuildingEventCatapult$1.fire(ModelBuildingEventCatapult.java:44) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.fireEvent(DefaultModelBuilder.java:1270) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:437) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:417) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:407) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729) [org.eclipse.m2e.editor_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050) [org.eclipse.m2e.editor_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+	at java.security.Provider$Service.newInstance(Provider.java:1617) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:236) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getInstance(SSLContext.java:156) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getDefault(SSLContext.java:96) ~[na:1.8.0_60]
+	at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(AetherRepositoryConnectorFactory.java:72) ~[aether-connector-okhttp-0.15.0.jar:0.15.0]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$1.newInstance(DefaultConstructionProxyFactory.java:86) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:108) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:92) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:115) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.bean.BeanScheduler$Activator.onProvision(BeanScheduler.java:176) ~[na:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:126) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:68) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:269) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1066) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:36) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1009) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1059) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1005) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	... 39 common frames omitted
+Caused by: java.security.KeyStoreException: "JKS" not found
+	at java.security.KeyStore.getInstance(KeyStore.java:851) ~[na:1.8.0_60]
+	at sun.security.ssl.TrustManagerFactoryImpl.getCacertsKeyStore(TrustManagerFactoryImpl.java:214) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.getDefaultTrustManager(SSLContextImpl.java:767) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.<init>(SSLContextImpl.java:733) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at java.security.Provider$Service.newInstance(Provider.java:1595) ~[na:1.8.0_60]
+	... 67 common frames omitted
+Caused by: java.security.NoSuchAlgorithmException: "JKS" KeyStore not available
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:159) ~[na:1.8.0_60]
+	at java.security.Security.getImpl(Security.java:695) ~[na:1.8.0_60]
+	at java.security.KeyStore.getInstance(KeyStore.java:848) ~[na:1.8.0_60]
+	... 75 common frames omitted
+2016-06-23 01:33:03,861 [Worker-18] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1018) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[na:na]
+	at org.eclipse.sisu.wire.EntrySetAdapter$ValueIterator.next(EntrySetAdapter.java:102) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositoryConnectorProvider.newRepositoryConnector(DefaultRepositoryConnectorProvider.java:103) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:516) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:287) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:218) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:202) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal(DefaultPluginDependenciesResolver.java:202) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:149) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.project.registry.EclipsePluginDependenciesResolver.resolve(EclipsePluginDependenciesResolver.java:59) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.resolveExtensionArtifacts(DefaultMavenPluginManager.java:940) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupExtensionsRealm(DefaultMavenPluginManager.java:867) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuildingHelper.createProjectRealm(DefaultProjectBuildingHelper.java:196) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultModelBuildingListener.buildExtensionsAssembled(DefaultModelBuildingListener.java:111) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.ModelBuildingEventCatapult$1.fire(ModelBuildingEventCatapult.java:44) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.fireEvent(DefaultModelBuilder.java:1270) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:437) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:417) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:407) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729) [org.eclipse.m2e.editor_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.editor.pom.DependencyTreePage$1.run(DependencyTreePage.java:216) [org.eclipse.m2e.editor_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+	at java.security.Provider$Service.newInstance(Provider.java:1617) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:236) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getInstance(SSLContext.java:156) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getDefault(SSLContext.java:96) ~[na:1.8.0_60]
+	at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(AetherRepositoryConnectorFactory.java:72) ~[aether-connector-okhttp-0.15.0.jar:0.15.0]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$1.newInstance(DefaultConstructionProxyFactory.java:86) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:108) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:92) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:115) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.bean.BeanScheduler$Activator.onProvision(BeanScheduler.java:176) ~[na:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:126) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:68) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:269) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1066) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:36) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1009) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1059) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1005) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	... 39 common frames omitted
+Caused by: java.security.KeyStoreException: "JKS" not found
+	at java.security.KeyStore.getInstance(KeyStore.java:851) ~[na:1.8.0_60]
+	at sun.security.ssl.TrustManagerFactoryImpl.getCacertsKeyStore(TrustManagerFactoryImpl.java:214) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.getDefaultTrustManager(SSLContextImpl.java:767) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.<init>(SSLContextImpl.java:733) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at java.security.Provider$Service.newInstance(Provider.java:1595) ~[na:1.8.0_60]
+	... 67 common frames omitted
+Caused by: java.security.NoSuchAlgorithmException: "JKS" KeyStore not available
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:159) ~[na:1.8.0_60]
+	at java.security.Security.getImpl(Security.java:695) ~[na:1.8.0_60]
+	at java.security.KeyStore.getInstance(KeyStore.java:848) ~[na:1.8.0_60]
+	... 75 common frames omitted
+2016-06-23 01:33:03,865 [Worker-18] ERROR o.e.m.editor.pom.DependencyTreePage - Unable to read maven project. Dependencies not updated.
+2016-06-23 01:33:06,353 [Worker-8] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+  at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(Unknown Source)
+  at ClassRealm[plexus.core, parent: null] (via modules: org.eclipse.sisu.wire.WireModule -> org.eclipse.sisu.plexus.PlexusBindingModule)
+  while locating io.takari.aether.connector.AetherRepositoryConnectorFactory
+  while locating java.lang.Object annotated with *
+
+1 error
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1018) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[na:na]
+	at org.eclipse.sisu.wire.EntrySetAdapter$ValueIterator.next(EntrySetAdapter.java:102) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositoryConnectorProvider.newRepositoryConnector(DefaultRepositoryConnectorProvider.java:103) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:516) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:287) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:218) ~[maven-aether-provider-3.3.3.jar:3.3.3]
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:202) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316) ~[aether-impl-1.0.2.v20150114.jar:na]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal(DefaultPluginDependenciesResolver.java:202) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:149) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.project.registry.EclipsePluginDependenciesResolver.resolve(EclipsePluginDependenciesResolver.java:59) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.resolveExtensionArtifacts(DefaultMavenPluginManager.java:940) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupExtensionsRealm(DefaultMavenPluginManager.java:867) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuildingHelper.createProjectRealm(DefaultProjectBuildingHelper.java:196) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultModelBuildingListener.buildExtensionsAssembled(DefaultModelBuildingListener.java:111) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.ModelBuildingEventCatapult$1.fire(ModelBuildingEventCatapult.java:44) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.fireEvent(DefaultModelBuilder.java:1270) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:437) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:417) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:407) ~[maven-model-builder-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191) ~[org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$LoadEffectivePomJob.run(MavenPomEditor.java:463) [org.eclipse.m2e.editor_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+	at java.security.Provider$Service.newInstance(Provider.java:1617) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:236) ~[na:1.8.0_60]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getInstance(SSLContext.java:156) ~[na:1.8.0_60]
+	at javax.net.ssl.SSLContext.getDefault(SSLContext.java:96) ~[na:1.8.0_60]
+	at io.takari.aether.connector.AetherRepositoryConnectorFactory.<init>(AetherRepositoryConnectorFactory.java:72) ~[aether-connector-okhttp-0.15.0.jar:0.15.0]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$1.newInstance(DefaultConstructionProxyFactory.java:86) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:108) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:92) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:115) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.bean.BeanScheduler$Activator.onProvision(BeanScheduler.java:176) ~[na:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:126) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:68) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:269) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1066) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:36) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1009) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1059) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1005) ~[sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	... 38 common frames omitted
+Caused by: java.security.KeyStoreException: "JKS" not found
+	at java.security.KeyStore.getInstance(KeyStore.java:851) ~[na:1.8.0_60]
+	at sun.security.ssl.TrustManagerFactoryImpl.getCacertsKeyStore(TrustManagerFactoryImpl.java:214) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.getDefaultTrustManager(SSLContextImpl.java:767) ~[na:1.8.0_60]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.<init>(SSLContextImpl.java:733) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at java.security.Provider$Service.newInstance(Provider.java:1595) ~[na:1.8.0_60]
+	... 66 common frames omitted
+Caused by: java.security.NoSuchAlgorithmException: "JKS" KeyStore not available
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:159) ~[na:1.8.0_60]
+	at java.security.Security.getImpl(Security.java:695) ~[na:1.8.0_60]
+	at java.security.KeyStore.getInstance(KeyStore.java:848) ~[na:1.8.0_60]
+	... 74 common frames omitted

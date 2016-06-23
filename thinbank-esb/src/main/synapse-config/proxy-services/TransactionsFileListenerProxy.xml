@@ -11,10 +11,7 @@
         <faultSequence/>
     </target>
     <parameter name="transport.PollInterval">5</parameter>
-    <parameter name="transport.vfs.FileURI">file:///d:/esb/fs/honda/in</parameter>
+    <parameter name="transport.vfs.FileURI">file:///Users/edgar/DEV/wso2-hacks/python-server</parameter>
     <parameter name="transport.vfs.ContentType">text/plain</parameter>
-    <parameter name="transport.vfs.MoveAfterFailure">file:///d:/esb/fs/honda//original</parameter>
-    <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
     <parameter name="transport.vfs.FileNamePattern">.*\.txt</parameter>
-    <parameter name="transport.vfs.MoveAfterProcess">file:///d:/esb/fs/honda/original</parameter>
 </proxy>
