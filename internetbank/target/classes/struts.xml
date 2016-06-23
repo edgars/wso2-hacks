@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+
+	<package name="default" extends="struts-default" namespace="/">
+	
+		<!-- Bank Details Action  -->
+		<action name="detail" class="actionClass.Bank_Detail_Action">
+			<result name="success">bank_detail.jsp</result>
+
+		</action>
+		
+		<!-- Different Login Actions -->
+		<!-- 1. Admin Login Action -->
+		<action name="adminlogin" class="actionClass.Admin_Login_Action"
+			method="checkLogin">
+			<result name="success" type="redirect">admin/welcome.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		
+		<!-- 2. Employee Login Action -->
+		<action name="emplogin" class="actionClass.Emp_Login_Action"
+			method="checkLogin">
+			<result name="success" type="redirect">emp/welcome.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		
+		<!-- 3. Client Login Action -->
+		<action name="clientlogin" class="actionClass.Client_Login_Action"
+			method="checkLogin">
+			<result name="success" type="redirect">user/welcome.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<!-- End of Login Actions -->
+		
+		
+		<!-- Employee Transactions Actions -->
+		<!-- 1. Employee Deposit Amount Action -->
+		<action name="deposit" class="actionClass.Emp_AddTrans_Action"
+			method="deposit">
+			<result name="success">addtrans.jsp</result>
+			
+		</action>
+		
+		<!-- 2. Employee Withdraw Amount Action -->
+		<action name="withdrawn" class="actionClass.Emp_AddTrans_Action"
+			method="withdrawn">
+			<result name="success">addwith.jsp</result>
+			<result name="error">addwith.jsp</result>
+		</action>
+		
+		<!-- 3. Employee can View any Transactions -->
+		<action name="viewcls" class="actionClass.Emp_AddTrans_Action"
+			method="viewcls">
+			<result name="success">view.jsp</result>
+		</action>
+		
+		<action name="edit_client" class="actionClass.Emp_AddClient_Action"
+			method="editclient">
+			<result name="success">editclient.jsp</result>
+		</action>
+		
+		<action name="eclient" class="actionClass.Emp_AddClient_Action"
+			method="eclient">
+			<result name="success">editclient.jsp</result>
+		</action>
+		<!-- End of Employee Actions -->
+
+
+		<!-- Client can view own Transaction Action -->
+		<action name="viewcl" class="actionClass.Client_View_Action"
+			method="viewcl">
+			<result name="success">view.jsp</result>
+		</action>
+
+
+		<!-- Change Password Actions -->
+		<!-- 1. Client can change own Password -->
+		<action name="changepw" class="actionClass.Client_Login_Action"
+			method="changepw">
+			<result name="success">changepw.jsp</result>
+			<result name="error">changepw.jsp</result>
+		</action>
+		
+		<!-- 2. Employee can change own Password -->
+		<action name="empchangepw" class="actionClass.Emp_Login_Action"
+			method="changepw">
+			<result name="success">changepw.jsp</result>
+			<result name="error">changepw.jsp</result>
+
+		</action>
+		
+		<!-- 3. Admin can change own Password -->
+		<action name="admchangepw" class="actionClass.Admin_Login_Action"
+			method="changepw">
+			<result name="success">changepw.jsp</result>
+			<result name="error">changepw.jsp</result>
+
+		</action>
+		
+		<!-- 4. Admin can change own Client Password -->
+		<action name="adm_user_changepw" class="actionClass.Admin_ClientChPW_Action"
+			method="changepw">
+			<result name="success">userchangepw.jsp</result>
+			<result name="error">userchangepw.jsp</result>
+
+		</action>
+		
+		<!-- 5. Admin can change Employee Password -->
+		<action name="adm_emp_changepw" class="actionClass.Admin_EmpChPW_Action"
+			method="changepw">
+			<result name="success">empchangepw.jsp</result>
+			<result name="error">empchangepw.jsp</result>
+
+		</action>
+		<!-- End of Change password Actions -->
+		
+		
+		<!-- Employee Add Client Action  -->
+		<action name="addClient" class="actionClass.Emp_AddClient_Action"
+			method="addClient">
+			<result name="success">addclient2.jsp</result>
+			
+		</action>
+
+		<action name="addClients" class="actionClass.Emp_AddClient_Action"
+			method="addClients">
+			<result name="success">addtrans.jsp</result>
+			
+
+		</action>
+		
+		<!-- Admin Add Employee Action -->
+		<action name="addEmp" class="actionClass.Admin_AddEmp_Action"
+			method="addEmp">
+			<result name="success">addemp2.jsp</result>
+			
+
+		</action>
+
+		<action name="addEmps" class="actionClass.Admin_AddEmp_Action"
+			method="addEmps">
+			<result name="success">addemp2.jsp</result>
+			
+
+		</action>
+
+
+		<!-- Logout & Destroy all Sessions Actions -->
+		<action name="logout" class="actionClass.Admin_Login_Action"
+			method="logout">
+			<result name="success" type="redirect">login-portal.jsp
+			</result>
+		</action>
+
+
+		<!-- Othererererererererererere -->
+<!-- 
+		<action name="saveOrUpdateUser" method="saveOrUpdate" class="actionClass.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		</action>
+		<action name="listUser" method="list" class="actionClass.UserAction">
+			<result name="success">register.jsp</result>
+		</action>
+		<action name="editUser" method="edit" class="actionClass.UserAction">
+			<result name="success">register.jsp</result>
+		</action>
+		<action name="deleteUser" method="delete" class="actionClass.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		</action>
+ -->
+
+	</package>
+</struts>

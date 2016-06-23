@@ -1,0 +1,75 @@
+header {background-color: #FFFFFF;}
+html { background-color: #CBCBCB;}
+body {
+background-color: #CBCBCB;
+background-repeat: repeat-x; 
+background-position: 0px 90px;
+padding: 0px 0px 0px 0px; 
+font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.container{
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  background-color: #FFFFFF;
+  -webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
+.container-main{
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  background-color: #FFFFFF;
+  -webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
+#footer-container-content {
+    background-color: #8BC7DF;
+    border: 0px solid #FFFFFF;
+    margin: 0 auto;
+    min-height: 40px;
+   border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  border-top-left-radius:0px;
+  border-top-right-radius:0px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+ 
+#footer-container-content p { 
+	text-align: center; 
+	font-size: 9pt; 
+	color: #FFFFFF; 
+	border: 0px #0095D4 solid; 
+	padding: 10px 10px 0px 10px; 
+} 
+ 
+a.footer:link, a.footer:visited { 
+	font-size: 9pt; 
+	text-decoration: none;  
+	color: #FFFFFF; 
+	font-weight: normal; 
+} 
+ 
+a.footer:hover { 
+	font-size: 9pt; 
+	text-decoration: underline;  
+	color: #FFFFFF; 
+	font-weight: normal; 
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;    
+}
+
+#myCarousel { border-radius: 6px; overflow: hidden; }
+
+
