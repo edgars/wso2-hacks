@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="TransactionsFileListenerProxy" serviceGroup="" startOnLoad="true" trace="disable" transports="vfs" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <property expression="//p:text" name="conteudo" scope="default" type="STRING" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
+            <script language="js"><![CDATA[var conteudo = mc.getProperty("conteudo") ;
+         print(" Conteudo :  " + conteudo + " recebido ");]]></script>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.PollInterval">5</parameter>
+    <parameter name="transport.vfs.FileURI">file:///d:/esb/fs/honda/in</parameter>
+    <parameter name="transport.vfs.ContentType">text/plain</parameter>
+    <parameter name="transport.vfs.MoveAfterFailure">file:///d:/esb/fs/honda//original</parameter>
+    <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
+    <parameter name="transport.vfs.FileNamePattern">.*\.txt</parameter>
+    <parameter name="transport.vfs.MoveAfterProcess">file:///d:/esb/fs/honda/original</parameter>
+</proxy>
