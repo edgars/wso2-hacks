@@ -7,6 +7,7 @@
 '''
 
 import socket
+import datetime
 import sys
 import io
 from thread import *
@@ -54,7 +55,10 @@ def clientthread(conn):
         data = conn.recv(1024)
         print 'Receiving data: ' + data
         reply = 'Processing Information: ' + data
-        with io.FileIO("transaction.txt", "a") as file:
+        timestamp = '{:%Y%m%d%H%M%S}'.format(datetime.datetime.now())
+        with io.FileIO('transactions.log', 'a') as file:
+            file.write('socket,'+ timestamp + ','+ data )
+        with io.FileIO('transactions/in/'+ timestamp + ".dat", "a") as file:
             file.write(data)
         if not data:
             break
