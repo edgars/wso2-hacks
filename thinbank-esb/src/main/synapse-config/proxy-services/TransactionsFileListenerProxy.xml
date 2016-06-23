@@ -5,7 +5,7 @@
             <log level="full"/>
             <property expression="//p:text" name="conteudo" scope="default" type="STRING" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
             <script language="js"><![CDATA[var conteudo = mc.getProperty("conteudo") ;
-         print(" Conteudo :  " + conteudo + " recebido ");]]></script>
+             print(" Conteudo :  " + conteudo + " recebido ");]]></script>
         </inSequence>
         <outSequence/>
         <faultSequence/>
