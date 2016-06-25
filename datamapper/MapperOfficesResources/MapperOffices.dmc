@@ -1,8 +1,16 @@
 function map_S_Envelope_S_company( ){ 
 var outputcompany={};
 
-outputcompany.offices.asiaoffice.phone = inputsoapenv_Envelope.soapenv_Body.company.usoffice.phone;
-outputcompany.offices.europeoffice.phone = inputsoapenv_Envelope.soapenv_Body.company.asiaoffice.phone;
-outputcompany.offices.usoffice.phone = inputsoapenv_Envelope.soapenv_Body.company.europeoffice.phone;
+
+
+
+
+
+outputcompany = {};
+outputcompany.offices = {};
+outputcompany.offices.usoffice = {};
+
+
+outputcompany.offices.usoffice.phone = inputsoapenv_Envelope.soapenv_Body.company.europeoffice.address.street;
 return outputcompany;
 }

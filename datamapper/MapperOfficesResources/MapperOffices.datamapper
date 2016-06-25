@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
   <input>
     <treeNode name="soapenv:Envelope" level="1">
       <node name="soapenv:Body" level="2">
@@ -33,7 +33,9 @@
               <node name="street" level="6">
                 <properties key="type" value="string"/>
                 <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street"/>
-                <outNode/>
+                <outNode>
+                  <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
+                </outNode>
                 <inNode/>
               </node>
               <properties key="type" value="object"/>
@@ -45,9 +47,7 @@
             <node name="phone" level="5">
               <properties key="type" value="string"/>
               <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/phone"/>
-              <outNode>
-                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
-              </outNode>
+              <outNode/>
               <inNode/>
             </node>
             <properties key="type" value="object"/>
@@ -96,9 +96,7 @@
             <node name="phone" level="5">
               <properties key="type" value="string"/>
               <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/phone"/>
-              <outNode>
-                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.1/@node.1/@inNode"/>
-              </outNode>
+              <outNode/>
               <inNode/>
             </node>
             <node name="fax" level="5">
@@ -153,9 +151,7 @@
             <node name="phone" level="5">
               <properties key="type" value="string"/>
               <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/phone"/>
-              <outNode>
-                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.2/@node.1/@inNode"/>
-              </outNode>
+              <outNode/>
               <inNode/>
             </node>
             <node name="fax" level="5">
@@ -213,7 +209,7 @@
             <properties key="type" value="string"/>
             <properties key="id" value="http://jsonschema.net/offices/usoffice/phone"/>
             <outNode/>
-            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
           </node>
           <node name="fax" level="4">
             <properties key="type" value="string"/>
@@ -238,7 +234,7 @@
             <properties key="type" value="string"/>
             <properties key="id" value="http://jsonschema.net/offices/europeoffice/phone"/>
             <outNode/>
-            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.1/@node.1/@outNode/@outgoingLink.0"/>
+            <inNode/>
           </node>
           <node name="fax" level="4">
             <properties key="type" value="string"/>
@@ -262,7 +258,7 @@
             <properties key="type" value="string"/>
             <properties key="id" value="http://jsonschema.net/offices/asiaoffice/phone"/>
             <outNode/>
-            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.2/@node.1/@outNode/@outgoingLink.0"/>
+            <inNode/>
           </node>
           <node name="fax" level="4">
             <properties key="type" value="string"/>
@@ -293,4 +289,18 @@
       <inNode/>
     </treeNode>
   </output>
+  <operators xsi:type="datamapper:UpperCase">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode/>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
 </datamapper:DataMapperRoot>
