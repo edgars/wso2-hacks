@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/convert" name="EmployeeToEngineerAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <datamapper config="gov:datamapper/MapperOffices.dmc" description="Mapper" inputSchema="gov:datamapper/MapperOffices_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/MapperOffices_outputSchema.json" outputType="JSON"/>
+            <respond description="Return"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

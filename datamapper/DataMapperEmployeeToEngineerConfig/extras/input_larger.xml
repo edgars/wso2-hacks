@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Body>
+<company>
+<name>WSO2</name>
+<usoffice>
+<address>
+   <no>787</no>
+   <street>Castro Street,Mountain View</street>
+   <city>CA</city>
+   <code>94041</code>
+   <country>US</country>
+</address>
+<phone> +1 650 745 4499</phone>
+<fax> +1 408 689 4328</fax>
+</usoffice>
+<europeoffice>
+<address>
+   <no>2-6 </no>
+   <street>Boundary Row</street>
+   <city>London</city>
+   <code>SE1 8HP</code>
+   <country>UK</country>
+</address>
+<phone>+44 203 318 6025</phone>
+</europeoffice>
+<asiaoffice>
+<address>
+   <no>20</no>
+   <street>Palm Grove</street>
+   <city>Colombo 03</city>
+   <code>10003</code>
+   <country>LKA</country>
+</address>
+<phone>+94 11 214 5345</phone>
+<fax>+94 11 2145300</fax>
+</asiaoffice>
+</company>
+</soapenv:Body>
+</soapenv:Envelope>

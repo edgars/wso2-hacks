@@ -2,27 +2,47 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.edgarsilva.thinbank-fs</groupId>
-  <artifactId>thinbank-fs</artifactId>
+  <groupId>br.com.edgarsilva.DataMapperCAPP</groupId>
+  <artifactId>DataMapperCAPP</artifactId>
   <version>1.0.0</version>
   <packaging>carbon/application</packaging>
-  <name>thinbank-fs</name>
-  <description>thinbank-fs</description>
+  <name>DataMapperCAPP</name>
+  <description>DataMapperCAPP</description>
   <properties>
-    <br.com.edgarsilva.thinbank-esb.proxy-service_._TransactionsFileListenerProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.thinbank-esb.proxy-service_._TransactionsFileListenerProxy>
-    <br.com.edgarsilva.thinbank-esb.local-entry_._smooks-csv-transaction>capp/EnterpriseServiceBus</br.com.edgarsilva.thinbank-esb.local-entry_._smooks-csv-transaction>
+    <br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping_inputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping_inputSchema>
+    <br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping_outputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping_outputSchema>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping_inputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping_inputSchema>
+    <br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping>capp/ApplicationServer</br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping>
+    <br.com.edgarsilva.DataMapperEmployeeToEngineerConfig.api_._EmployeeToEngineerAPI>capp/EnterpriseServiceBus</br.com.edgarsilva.DataMapperEmployeeToEngineerConfig.api_._EmployeeToEngineerAPI>
+    <br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping>capp/EnterpriseServiceBus</br.com.edgarsilva.EmployeeToEngineerRegistryResource.resource_._EmployeeToEngineerMapping>
+    <br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices_inputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices_inputSchema>
+    <br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping_outputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.DataMapperResources.resource_._EmployeeToEngineerMapping_outputSchema>
+    <br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices>capp/EnterpriseServiceBus</br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices>
+    <br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices_outputSchema>capp/EnterpriseServiceBus</br.com.edgarsilva.MapperOfficesResources.resource_._MapperOffices_outputSchema>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>br.com.edgarsilva.thinbank-esb.local-entry</groupId>
-      <artifactId>smooks-csv-transaction</artifactId>
+      <groupId>br.com.edgarsilva.MapperOfficesResources.resource</groupId>
+      <artifactId>MapperOffices_inputSchema</artifactId>
       <version>1.0.0</version>
-      <type>xml</type>
+      <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>br.com.edgarsilva.thinbank-esb.proxy-service</groupId>
-      <artifactId>TransactionsFileListenerProxy</artifactId>
+      <groupId>br.com.edgarsilva.MapperOfficesResources.resource</groupId>
+      <artifactId>MapperOffices_outputSchema</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.MapperOfficesResources.resource</groupId>
+      <artifactId>MapperOffices</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.DataMapperEmployeeToEngineerConfig.api</groupId>
+      <artifactId>EmployeeToEngineerAPI</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
