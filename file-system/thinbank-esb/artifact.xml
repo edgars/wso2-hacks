@@ -2,4 +2,7 @@
     <artifact name="TransactionsFileListenerProxy" groupId="br.com.edgarsilva.thinbank-esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/TransactionsFileListenerProxy.xml</file>
     </artifact>
+    <artifact name="smooks-csv-transaction" groupId="br.com.edgarsilva.thinbank-esb.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/smooks-csv-transaction.xml</file>
+    </artifact>
 </artifacts>

@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proxy name="TransactionsFileListenerProxy" serviceGroup="" startOnLoad="true" trace="disable" transports="vfs" xmlns="http://ws.apache.org/ns/synapse">
+<proxy name="TransactionsFileListenerProxy" startOnLoad="true" trace="disable" transports="vfs" xmlns="http://ws.apache.org/ns/synapse">
     <target>
         <inSequence>
             <log level="full"/>
+            <dblookup description="getAccountBalance">
+                <connection>
+                    <pool>
+                        <password>mysql</password>
+                        <driver>com.mysql.jdbc.Driver</driver>
+                        <url>jdbc:mysql://localhost:3306/banking</url>
+                        <user>root</user>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[SELECT max(balance) as accountBalance FROM banking.bank_trans]]></sql>
+                    <result column="accountBalance" name="accountBalance"/>
+                </statement>
+            </dblookup>
             <property expression="//p:text" name="conteudo" scope="default" type="STRING" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
             <script language="js"><![CDATA[var conteudo = mc.getProperty("conteudo") ;
-             print(" Conteudo :  " + conteudo + " recebido ");]]></script>
+                 print(" Content from Payload :  " + conteudo );]]></script>
+            <smooks config-key="smooks-csv-transaction" description="ConvertCSV">
+                <input type="text"/>
+                <output type="xml"/>
+            </smooks>
+            <log level="full"/>
+            <iterate expression="//csv-set/csv-record">
+                <target>
+                    <sequence>
+                        <property description="PropertyAmount" expression="//csv-record/amount" name="amount" scope="default" type="FLOAT" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
+                        <script description="setNewAccountBalance" language="js"><![CDATA[var accountBalance =  parseFloat(mc.getProperty("accountBalance"));
+var amount = parseFloat(mc.getProperty("amount"));
+var result = parseFloat(accountBalance + amount);
+print(" Valor do Calculo :  " + result );
+mc.setProperty("newAccountBalance", result);]]></script>
+                        <dbreport description="SaveTransactionIntoDatabase">
+                            <connection>
+                                <pool>
+                                    <password>mysql</password>
+                                    <driver>com.mysql.jdbc.Driver</driver>
+                                    <url>jdbc:mysql://localhost:3306/banking</url>
+                                    <user>root</user>
+                                </pool>
+                            </connection>
+                            <statement>
+                                <sql><![CDATA[insert into banking.bank_trans (bank_client_id,details,balance, deposit) values (?,?,?,?)]]></sql>
+                                <parameter expression="//csv-record/accountId/text()" type="VARCHAR"/>
+                                <parameter expression="//csv-record/type/text()" type="VARCHAR"/>
+                                <parameter expression="get-property('newAccountBalance')" type="DOUBLE"/>
+                                <parameter expression="//csv-record/amount" type="DOUBLE"/>
+                            </statement>
+                        </dbreport>
+                    </sequence>
+                </target>
+            </iterate>
         </inSequence>
         <outSequence/>
         <faultSequence/>
     </target>
     <parameter name="transport.PollInterval">5</parameter>
-    <parameter name="transport.vfs.FileURI">file:///Users/edgar/DEV/wso2-hacks/python-server</parameter>
+    <parameter name="transport.vfs.FileURI">file:///Users/edgar/DEV/wso2-hacks/python-server/transactions/in</parameter>
     <parameter name="transport.vfs.ContentType">text/plain</parameter>
-    <parameter name="transport.vfs.FileNamePattern">.*\.txt</parameter>
+    <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+    <parameter name="transport.vfs.MoveAfterFailure">file:///Users/edgar/DEV/wso2-hacks/python-server/transactions/out</parameter>
+    <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
+    <parameter name="transport.vfs.FileNamePattern">.*\.dat</parameter>
+    <parameter name="transport.vfs.MoveAfterProcess">file:///Users/edgar/DEV/wso2-hacks/python-server/transactions/out</parameter>
 </proxy>

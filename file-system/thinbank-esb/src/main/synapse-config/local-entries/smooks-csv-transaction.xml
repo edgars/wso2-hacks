@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="smooks-csv-transaction" xmlns="http://ws.apache.org/ns/synapse">
+    <smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:csv="http://www.milyn.org/xsd/smooks/csv-1.1.xsd">
+        <!--
+    Configure the CSV Reader to read the message and change it into a stream of SAX events.
+    -->
+        <csv:reader fields="type,amount,accountId,detail"/>
+        <!-- Add other resources (e.g. java binding resources, templating resources etc) to perform other tasks... -->
+    </smooks-resource-list>
+</localEntry>
