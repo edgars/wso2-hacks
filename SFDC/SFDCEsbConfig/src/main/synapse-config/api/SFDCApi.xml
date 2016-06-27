@@ -6,7 +6,7 @@
                 <batchSize>200</batchSize>
                 <queryString>SELECT Contact.FirstName FROM Contact</queryString>
             </salesforce.query>
-            <property description="SetJSON" name="messageType" scope="default" type="STRING" value="application/json"/>
+            <property description="SetJSON" name="messageType" scope="axis2" type="STRING" value="application/json"/>
             <respond description="Back"/>
         </inSequence>
         <outSequence/>
