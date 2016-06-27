@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="salesforce_init" xmlns="http://ws.apache.org/ns/synapse">
+    <salesforce.init>
+        <username>edgarsilva@gmail.com</username>
+        <password>{wso2:vault-lookup('sfdc.pass')}</password>
+        <loginUrl>https://login.salesforce.com/services/Soap/u/36.0</loginUrl>
+        <forceLogin/>
+        <blocking/>
+    </salesforce.init>
+</localEntry>

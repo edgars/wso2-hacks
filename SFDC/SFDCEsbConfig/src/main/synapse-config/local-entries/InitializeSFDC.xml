@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="InitializeSFDC" xmlns="http://ws.apache.org/ns/synapse">
+    <localentry key="sfConfig">
+        <salesforce.init>
+            <username>edgarsilva@gmail.com</username>
+            <password>jessika77nQQN3d4yKKbLuCgPERaSwMury</password>
+            <loginurl>https://login.salesforce.com/services/Soap/u/29.0</loginurl>
+            <forcelogin/>
+        </salesforce.init>
+    </localentry>
+</localEntry>

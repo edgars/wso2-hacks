@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="SFDCApi" groupId="br.com.edgarsilva.SFDCEsbConfig.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/SFDCApi.xml</file>
+    </artifact>
+    <artifact name="InitializeSFDC" groupId="br.com.edgarsilva.SFDCEsbConfig.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/InitializeSFDC.xml</file>
+    </artifact>
+    <artifact name="salesforcerest-connector" groupId="br.com.edgarsilva.SFDCEsbConfig.lib" version="1.0.0" type="synapse/lib" serverRole="EnterpriseServiceBus">
+        <file>salesforcerest-connector-1.0.0.zip</file>
+    </artifact>
+    <artifact name="salesforce" groupId="br.com.edgarsilva.SFDCEsbConfig.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/salesforce.xml</file>
+    </artifact>
+    <artifact name="salesforce_init" groupId="br.com.edgarsilva.SFDCEsbConfig.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/salesforce_init.xml</file>
+    </artifact>
+</artifacts>

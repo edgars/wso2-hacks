@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="salesforce" xmlns="http://ws.apache.org/ns/synapse">
+    <salesforcerest.init>
+        <accessToken/>
+        <apiVersion/>
+        <hostName/>
+        <refreshToken/>
+        <clientSecret>jessika77nQQN3d4yKKbLuCgPERaSwMury</clientSecret>
+        <clientId>edgarsilva@gmail.com</clientId>
+        <apiUrl>https://login.salesforce.com/services/Soap/u/36.0</apiUrl>
+        <registryPath/>
+        <intervalTime/>
+    </salesforcerest.init>
+</localEntry>

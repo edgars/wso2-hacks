@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sfdc" name="SFDCApi" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/tickets">
+        <inSequence>
+            <salesforce.query configKey="salesforce_init">
+                <batchSize>200</batchSize>
+                <queryString>SELECT Contact.FirstName FROM Contact</queryString>
+            </salesforce.query>
+            <property description="SetJSON" name="messageType" scope="default" type="STRING" value="application/json"/>
+            <respond description="Back"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
