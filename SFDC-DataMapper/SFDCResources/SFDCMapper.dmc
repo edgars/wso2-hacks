@@ -1,0 +1,27 @@
+function map_S_queryResponse_S_list( ){ 
+var outputlist={};
+
+
+
+
+
+
+outputlist = {};
+
+
+
+
+outputlist.contacts = [];
+
+for(i_records in inputqueryResponse.result.records){
+
+outputlist.contacts[i_records] = {};
+
+
+
+
+outputlist.contacts[i_records].attr_fullName = inputqueryResponse.result.records[i_records].FirstName;
+
+}
+return outputlist;
+}

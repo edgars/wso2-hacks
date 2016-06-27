@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="queryResponse" level="1">
+      <node name="result" level="2">
+        <node name="@type" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/result/type"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="done" level="3">
+          <properties key="type" value="boolean"/>
+          <properties key="id" value="http://wso2jsonschema.org/result/done"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="queryLocator" level="3">
+          <node name="@nil" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/nil"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="null"/>
+          <properties key="id" value="http://wso2jsonschema.org/result/queryLocator"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/result/nil]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="records" level="3">
+          <node name="@type" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/records/0/type"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="type" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/records/0/type"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="Id" level="4">
+            <node name="@nil" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/result/records/0/nil"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <properties key="type" value="null"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/records/0/Id"/>
+            <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/result/records/0/nil]}"/>
+            <properties key="attribute_type" value="{attribute_type=[string]}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="FirstName" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/records/0/FirstName"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="LastName" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/result/records/0/LastName"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/result/records"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/result/records/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/result/records/0/type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <properties key="properties_id" value="{type={id=http://wso2jsonschema.org/result/records/0/type, type=string}, Id={id=http://wso2jsonschema.org/result/records/0/Id, type=null, attributes={nil={id=http://wso2jsonschema.org/result/records/0/nil, type=string}}}, FirstName={id=http://wso2jsonschema.org/result/records/0/FirstName, type=string}, LastName={id=http://wso2jsonschema.org/result/records/0/LastName, type=string}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="size" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/result/size"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/result"/>
+        <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/result/type]}"/>
+        <properties key="attribute_type" value="{attribute_type=[string]}"/>
+        <properties key="properties_id" value="{done={id=http://wso2jsonschema.org/result/done, type=boolean}, queryLocator={id=http://wso2jsonschema.org/result/queryLocator, type=null, attributes={nil={id=http://wso2jsonschema.org/result/nil, type=string}}}, records={id=http://wso2jsonschema.org/result/records, type=array, items=[{id=http://wso2jsonschema.org/result/records/0, type=object, attributes={type={id=http://wso2jsonschema.org/result/records/0/type, type=string}}, properties={type={id=http://wso2jsonschema.org/result/records/0/type, type=string}, Id={id=http://wso2jsonschema.org/result/records/0/Id, type=null, attributes={nil={id=http://wso2jsonschema.org/result/records/0/nil, type=string}}}, FirstName={id=http://wso2jsonschema.org/result/records/0/FirstName, type=string}, LastName={id=http://wso2jsonschema.org/result/records/0/LastName, type=string}}}]}, size={id=http://wso2jsonschema.org/result/size, type=number}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://json-schema.org/draft-04/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="list" level="1">
+      <node name="name" level="2">
+        <properties key="type" value="string"/>
+        <properties key="added_properties_id" value="hasProperties"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="contacts" level="2">
+        <node name="@fullName" level="3">
+          <properties key="type" value="string"/>
+          <properties key="added_attribute_id"/>
+          <properties key="added_attribute_type" value="string"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.3/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="array"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="added_properties_id" value="hasProperties"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

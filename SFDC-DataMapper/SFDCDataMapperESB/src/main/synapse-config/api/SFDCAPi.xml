@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sfdc" name="SFDCApi" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/contacts">
+        <inSequence>
+            <salesforce.query configKey="salesfoce_conf">
+                <batchSize>200</batchSize>
+                <queryString>SELECT Contact.FirstName,Contact.LastName FROM Contact</queryString>
+            </salesforce.query>
+            <property description="SetJSON" name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <datamapper config="gov:datamapper/SFDCMapper.dmc" description="Mapper" inputSchema="gov:datamapper/SFDCMapper_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/SFDCMapper_outputSchema.json" outputType="JSON"/>
+            <respond description="Back"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

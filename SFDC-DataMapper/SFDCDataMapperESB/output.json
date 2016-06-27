@@ -1,0 +1,10 @@
+[
+	{
+		name: "red",
+		value: "#f00"
+	},
+	{
+			name: "red",
+		value: "#0f0"
+	}
+]
