@@ -31,6 +31,16 @@
             "id" : "http://wso2jsonschema.org/result/records/0",
             "type" : "object",
             "properties" : {
+              "Email" : {
+                "attributes" : {
+                  "nil" : {
+                    "id" : "http://wso2jsonschema.org/result/records/0/nil",
+                    "type" : "string"
+                  }
+                },
+                "id" : "http://wso2jsonschema.org/result/records/0/Email",
+                "type" : "null"
+              },
               "FirstName" : {
                 "id" : "http://wso2jsonschema.org/result/records/0/FirstName",
                 "type" : "string"

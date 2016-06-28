@@ -1,71 +1,77 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema#",
-  "id" : "http://jsonschema.net",
-  "title" : "company",
+  "nullable" : "false",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
   "type" : "object",
   "properties" : {
-    "offices" : {
-      "id" : "http://jsonschema.net/offices",
+    "engineers" : {
+      "id" : "http://wso2jsonschema.org/engineers",
       "type" : "object",
+      "nullable" : "false",
       "properties" : {
-        "europeoffice" : {
-          "id" : "http://jsonschema.net/offices/europeoffice",
-          "type" : "object",
-          "properties" : {
-            "address" : {
-              "id" : "http://jsonschema.net/offices/europeoffice/address",
-              "type" : "string"
-            },
-            "phone" : {
-              "id" : "http://jsonschema.net/offices/europeoffice/phone",
-              "type" : "string"
-            },
-            "fax" : {
-              "id" : "http://jsonschema.net/offices/europeoffice/fax",
-              "type" : "string"
+        "engineerList" : {
+          "id" : "http://wso2jsonschema.org/engineers/engineerList",
+          "type" : "array",
+          "nullable" : "false",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/engineers/engineerList/0",
+            "type" : "object",
+            "properties" : {
+              "fullname" : {
+                "id" : "http://wso2jsonschema.org/engineers/engineerList/0/fullname",
+                "type" : "string",
+                "nullable" : "false"
+              },
+              "addresses" : {
+                "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses",
+                "type" : "object",
+                "nullable" : "false",
+                "properties" : {
+                  "address" : {
+                    "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address",
+                    "type" : "array",
+                    "nullable" : "false",
+                    "items" : [ {
+                      "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0",
+                      "type" : "object",
+                      "properties" : {
+                        "location" : {
+                          "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location",
+                          "type" : "string",
+                          "nullable" : "false"
+                        },
+                        "city" : {
+                          "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city",
+                          "type" : "object",
+                          "nullable" : "false",
+                          "properties" : {
+                            "postalcode" : {
+                              "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode",
+                              "type" : "number",
+                              "nullable" : "false"
+                            },
+                            "text" : {
+                              "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text",
+                              "type" : "string",
+                              "nullable" : "false"
+                            }
+                          }
+                        },
+                        "road" : {
+                          "id" : "http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road",
+                          "type" : "string",
+                          "nullable" : "false"
+                        }
+                      }
+                    } ]
+                  }
+                }
+              }
             }
-          }
-        },
-        "asiaoffice" : {
-          "id" : "http://jsonschema.net/offices/asiaoffice",
-          "type" : "object",
-          "properties" : {
-            "address" : {
-              "id" : "http://jsonschema.net/offices/asiaoffice/address",
-              "type" : "string"
-            },
-            "phone" : {
-              "id" : "http://jsonschema.net/offices/asiaoffice/phone",
-              "type" : "string"
-            },
-            "fax" : {
-              "id" : "http://jsonschema.net/offices/asiaoffice/fax",
-              "type" : "string"
-            }
-          }
-        },
-        "usoffice" : {
-          "id" : "http://jsonschema.net/offices/usoffice",
-          "type" : "object",
-          "properties" : {
-            "address" : {
-              "id" : "http://jsonschema.net/offices/usoffice/address",
-              "type" : "string"
-            },
-            "phone" : {
-              "id" : "http://jsonschema.net/offices/usoffice/phone",
-              "type" : "string"
-            },
-            "fax" : {
-              "id" : "http://jsonschema.net/offices/usoffice/fax",
-              "type" : "string"
-            }
-          },
-          "required" : [ "address", "phone", "fax" ]
+          } ]
         }
-      },
-      "required" : [ "usoffice", "europeoffice", "asiaoffice" ]
+      }
     }
-  },
-  "required" : [ "offices" ]
+  }
 }

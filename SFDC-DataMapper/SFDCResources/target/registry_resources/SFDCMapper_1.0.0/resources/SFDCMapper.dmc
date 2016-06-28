@@ -1,27 +1,28 @@
-function map_S_queryResponse_S_list( ){ 
-var outputlist={};
+function map_S_queryResponse_S_contacts( ){ 
+var outputcontacts={};
 
 
 
 
 
 
-outputlist = {};
+outputcontacts = {};
 
 
+outputcontacts.size = inputqueryResponse.result.size;
 
 
-outputlist.contacts = [];
+outputcontacts.list = [];
 
 for(i_records in inputqueryResponse.result.records){
 
-outputlist.contacts[i_records] = {};
+outputcontacts.list[i_records] = {};
 
 
 
 
-outputlist.contacts[i_records].attr_fullName = inputqueryResponse.result.records[i_records].FirstName;
+outputcontacts.list[i_records].FullName = inputqueryResponse.result.records[i_records].FirstName;
 
 }
-return outputlist;
+return outputcontacts;
 }

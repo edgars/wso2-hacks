@@ -1,16 +1,28 @@
-function map_S_Envelope_S_company( ){ 
-var outputcompany={};
+map_S_Envelope_S_root = function(){ 
+var outputroot={};
 
 
 
 
 
 
-outputcompany = {};
-outputcompany.offices = {};
-outputcompany.offices.usoffice = {};
+outputroot = {};
+outputroot.engineers = {};
 
 
-outputcompany.offices.usoffice.phone = inputsoapenv_Envelope.soapenv_Body.company.europeoffice.address.street;
-return outputcompany;
+
+
+outputroot.engineers.engineerList = [];
+
+for(i_ns1_employee in inputsoapenv_Envelope.soapenv_Body.ns1_employees.ns1_employee){
+
+outputroot.engineers.engineerList[i_ns1_employee] = {};
+
+
+
+
+outputroot.engineers.engineerList[i_ns1_employee].fullname = inputsoapenv_Envelope.soapenv_Body.ns1_employees.ns1_employee[i_ns1_employee].ns1_firstname.concat('',inputsoapenv_Envelope.soapenv_Body.ns1_employees.ns1_employee[i_ns1_employee].ns1_lastname);
+
 }
+return outputroot;
+};

@@ -1,156 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_FZ100DwREeayTaTbzGZf-Q" type="DataMapper" name="SFDCMapper.datamapper_diagram" measurementUnit="Pixel">
   <children xmi:type="notation:Shape" xmi:id="_FeGpwDwREeayTaTbzGZf-Q" type="2002" fontName=".SF NS Text">
-    <children xmi:type="notation:Shape" xmi:id="_J1ybsDwREeayTaTbzGZf-Q" type="3002" fontName=".SF NS Text">
-      <children xmi:type="notation:DecorationNode" xmi:id="_J1zp0DwREeayTaTbzGZf-Q" type="5002"/>
-      <children xmi:type="notation:Shape" xmi:id="_J2UAIDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-        <children xmi:type="notation:DecorationNode" xmi:id="_J2UnMTwREeayTaTbzGZf-Q" type="5001"/>
-        <children xmi:type="notation:Shape" xmi:id="_J2xTIDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_J2xTIjwREeayTaTbzGZf-Q" type="5001"/>
+    <children xmi:type="notation:Shape" xmi:id="_1Y47QDx0EeayTaTbzGZf-Q" type="3002" fontName=".SF NS Text">
+      <children xmi:type="notation:DecorationNode" xmi:id="_1Y47Qjx0EeayTaTbzGZf-Q" type="5002"/>
+      <children xmi:type="notation:Shape" xmi:id="_1Y8loDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1Y9MsDx0EeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_1Y_B4Dx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1Y_B4jx0EeayTaTbzGZf-Q" type="5001"/>
           <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.0"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2xTITwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_B4Tx0EeayTaTbzGZf-Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2x6MDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_J2x6MjwREeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o8Dx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1Y_o8jx0EeayTaTbzGZf-Q" type="5001"/>
           <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.1"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2x6MTwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o8Tx0EeayTaTbzGZf-Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2x6MzwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_J2x6NTwREeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o8zx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1Y_o9Tx0EeayTaTbzGZf-Q" type="5001"/>
           <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.2"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2x6NDwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o9Dx0EeayTaTbzGZf-Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2yhQDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_J2yhQjwREeayTaTbzGZf-Q" type="5001"/>
-          <children xmi:type="notation:Shape" xmi:id="_J4ZDwDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_J4ZDwjwREeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o9jx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1Y_o-Dx0EeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1ZafsDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1Zafsjx0EeayTaTbzGZf-Q" type="5001"/>
             <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.0"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4ZDwTwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZafsTx0EeayTaTbzGZf-Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4ZDwzwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_J4Zq0DwREeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1Zafszx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1ZaftTx0EeayTaTbzGZf-Q" type="5001"/>
             <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.1"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4ZDxDwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZaftDx0EeayTaTbzGZf-Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4Zq0TwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_J4Zq0zwREeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1Zaftjx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1ZafuDx0EeayTaTbzGZf-Q" type="5001"/>
             <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.2"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4Zq0jwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Zaftzx0EeayTaTbzGZf-Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4aR4DwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_J4aR4jwREeayTaTbzGZf-Q" type="5001"/>
-            <children xmi:type="notation:Shape" xmi:id="_J5UQ0DwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_1ZafuTx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1Zafuzx0EeayTaTbzGZf-Q" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_1Z0vYDx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
               <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.3/@inNode"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J5UQ0TwREeayTaTbzGZf-Q" x="-1" y="1"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Z0vYTx0EeayTaTbzGZf-Q" x="-1" y="1"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_J5UQ0jwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+            <children xmi:type="notation:Shape" xmi:id="_1Z0vYjx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
               <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.3/@outNode"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J5UQ0zwREeayTaTbzGZf-Q"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Z0vYzx0EeayTaTbzGZf-Q"/>
             </children>
             <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.3"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4aR4TwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Zafujx0EeayTaTbzGZf-Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4aR4zwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_J4aR5TwREeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1ZbGwDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1ZbGwjx0EeayTaTbzGZf-Q" type="5001"/>
             <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.4"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4aR5DwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZbGwTx0EeayTaTbzGZf-Q"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4a48DwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_1ZbGwzx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_1ZbGxTx0EeayTaTbzGZf-Q" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_1Z_HcDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_1Z_Hcjx0EeayTaTbzGZf-Q" type="5001"/>
+              <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.5/@node.0"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Z_HcTx0EeayTaTbzGZf-Q"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_1Z_Hczx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.5/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Z_HdDx0EeayTaTbzGZf-Q" x="-1" y="-11"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_1Z_ugDx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.5/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Z_ugTx0EeayTaTbzGZf-Q"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZbGxDx0EeayTaTbzGZf-Q"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_1ZbGxjx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
             <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@inNode"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4a48TwREeayTaTbzGZf-Q" x="-1" y="-11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZbGxzx0EeayTaTbzGZf-Q" x="-1" y="-11"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_J4a48jwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_1ZbGyDx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
             <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@outNode"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4a48zwREeayTaTbzGZf-Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ZbGyTx0EeayTaTbzGZf-Q"/>
           </children>
           <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2yhQTwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o9zx0EeayTaTbzGZf-Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2yhQzwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_J2zIUDwREeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o-Tx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1Y_o-zx0EeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1aRbUDx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.4/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1aRbUTx0EeayTaTbzGZf-Q" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_1aSCYDx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.4/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1aSCYTx0EeayTaTbzGZf-Q"/>
+          </children>
           <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.4"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2yhRDwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o-jx0EeayTaTbzGZf-Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2zIUTwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o_Dx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
           <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@inNode"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2zIUjwREeayTaTbzGZf-Q" x="-1" y="-11"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o_Tx0EeayTaTbzGZf-Q" x="-1" y="-11"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_J2zIUzwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_1Y_o_jx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
           <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@outNode"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2zIVDwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y_o_zx0EeayTaTbzGZf-Q"/>
         </children>
         <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2UnMDwREeayTaTbzGZf-Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y8loTx0EeayTaTbzGZf-Q"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_J2UnMjwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+      <children xmi:type="notation:Shape" xmi:id="_1Y9MsTx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
         <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@inNode"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2UnMzwREeayTaTbzGZf-Q" x="-1" y="-11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y9Msjx0EeayTaTbzGZf-Q" x="-1" y="-11"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_J2VOQDwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+      <children xmi:type="notation:Shape" xmi:id="_1Y9Mszx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
         <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@input/@treeNode.0/@outNode"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J2VOQTwREeayTaTbzGZf-Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y9MtDx0EeayTaTbzGZf-Q"/>
       </children>
       <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@input/@treeNode.0"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J1ybsTwREeayTaTbzGZf-Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1Y47QTx0EeayTaTbzGZf-Q"/>
     </children>
     <element xmi:type="datamapper:Input" href="SFDCMapper.datamapper#//@input"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FeGpwTwREeayTaTbzGZf-Q" width="250" height="100"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_FeHQ0DwREeayTaTbzGZf-Q" type="2003" fontName=".SF NS Text">
-    <children xmi:type="notation:Shape" xmi:id="_ZASP8DwREeayTaTbzGZf-Q" type="3011" fontName=".SF NS Text">
-      <children xmi:type="notation:DecorationNode" xmi:id="_ZASP8jwREeayTaTbzGZf-Q" type="5003"/>
-      <children xmi:type="notation:Shape" xmi:id="_ZAcA8DwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
-        <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@inNode"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZAcA8TwREeayTaTbzGZf-Q"/>
+    <children xmi:type="notation:Shape" xmi:id="_vvg38Dx0EeayTaTbzGZf-Q" type="3011" fontName=".SF NS Text">
+      <children xmi:type="notation:DecorationNode" xmi:id="_vvhfADx0EeayTaTbzGZf-Q" type="5003"/>
+      <children xmi:type="notation:Shape" xmi:id="_vvm-kDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_vvm-kjx0EeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_vvozwDx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_vvpa0Tx0EeayTaTbzGZf-Q" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvpa0Dx0EeayTaTbzGZf-Q"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_vvpa0jx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_vvpa1Dx0EeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_vvxWoDx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvxWoTx0EeayTaTbzGZf-Q" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_vvxWojx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.1/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvxWozx0EeayTaTbzGZf-Q"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvpa0zx0EeayTaTbzGZf-Q"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_vvpa1Tx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_vvpa1zx0EeayTaTbzGZf-Q" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_vv2PIDx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.2/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vv2PITx0EeayTaTbzGZf-Q" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_vv2PIjx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.2/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vv2PIzx0EeayTaTbzGZf-Q"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@node.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvpa1jx0EeayTaTbzGZf-Q"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_vvpa2Dx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+          <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvpa2Tx0EeayTaTbzGZf-Q" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_vvpa2jx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+          <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvpa2zx0EeayTaTbzGZf-Q"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvm-kTx0EeayTaTbzGZf-Q"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_ZAcA8jwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
-        <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@outNode"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZAcA8zwREeayTaTbzGZf-Q"/>
-      </children>
-      <children xmi:type="notation:Shape" xmi:id="_bQyS8DwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-        <children xmi:type="notation:DecorationNode" xmi:id="_bQyS8jwREeayTaTbzGZf-Q" type="5001"/>
-        <children xmi:type="notation:Shape" xmi:id="_bQ19UDwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+      <children xmi:type="notation:Shape" xmi:id="_vvm-kzx0EeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_vvm-lTx0EeayTaTbzGZf-Q" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_vv-yADx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
           <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1/@inNode"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bQ19UTwREeayTaTbzGZf-Q" x="-5" y="4"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vv-yATx0EeayTaTbzGZf-Q" x="-5" y="4"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_bQ19UjwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_vv-yAjx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
           <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1/@outNode"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bQ19UzwREeayTaTbzGZf-Q"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_qi_RsDwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-          <children xmi:type="notation:DecorationNode" xmi:id="_qi_4wDwREeayTaTbzGZf-Q" type="5001"/>
-          <children xmi:type="notation:Shape" xmi:id="_qjKQ0DwREeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
-            <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1/@node.0/@inNode"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qjKQ0TwREeayTaTbzGZf-Q" x="-5" y="4"/>
-          </children>
-          <children xmi:type="notation:Shape" xmi:id="_qjKQ0jwREeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
-            <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1/@node.0/@outNode"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qjKQ0zwREeayTaTbzGZf-Q"/>
-          </children>
-          <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1/@node.0"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qi_RsTwREeayTaTbzGZf-Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vv-yAzx0EeayTaTbzGZf-Q"/>
         </children>
         <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.1"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bQyS8TwREeayTaTbzGZf-Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvm-lDx0EeayTaTbzGZf-Q"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_dC6-8DwREeayTaTbzGZf-Q" type="3003" fontName=".SF NS Text">
-        <children xmi:type="notation:DecorationNode" xmi:id="_dC7mADwREeayTaTbzGZf-Q" type="5001"/>
-        <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@node.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dC6-8TwREeayTaTbzGZf-Q"/>
+      <children xmi:type="notation:Shape" xmi:id="_vvm-ljx0EeayTaTbzGZf-Q" type="3005" fontName=".SF NS Text">
+        <element xmi:type="datamapper:InNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvm-lzx0EeayTaTbzGZf-Q"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_vvm-mDx0EeayTaTbzGZf-Q" type="3019" fontName=".SF NS Text">
+        <element xmi:type="datamapper:OutNode" href="SFDCMapper.datamapper#//@output/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvm-mTx0EeayTaTbzGZf-Q"/>
       </children>
       <element xmi:type="datamapper:TreeNode" href="SFDCMapper.datamapper#//@output/@treeNode.0"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZASP8TwREeayTaTbzGZf-Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vvg38Tx0EeayTaTbzGZf-Q"/>
     </children>
     <element xmi:type="datamapper:Output" href="SFDCMapper.datamapper#//@output"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FeHQ0TwREeayTaTbzGZf-Q" x="540" y="198" width="250" height="100"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_FZ100TwREeayTaTbzGZf-Q"/>
   <element xmi:type="datamapper:DataMapperRoot" href="SFDCMapper.datamapper#/"/>
-  <edges xmi:type="notation:Connector" xmi:id="_r1D9kDwREeayTaTbzGZf-Q" type="4001" source="_J5UQ0jwREeayTaTbzGZf-Q" target="_qjKQ0DwREeayTaTbzGZf-Q">
-    <styles xmi:type="notation:FontStyle" xmi:id="_r1D9kTwREeayTaTbzGZf-Q" fontName=".SF NS Text"/>
+  <edges xmi:type="notation:Connector" xmi:id="_28p0EDx0EeayTaTbzGZf-Q" type="4001" source="_1aSCYDx0EeayTaTbzGZf-Q" target="_vv-yADx0EeayTaTbzGZf-Q">
+    <styles xmi:type="notation:FontStyle" xmi:id="_28p0ETx0EeayTaTbzGZf-Q" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_28p0Ejx0EeayTaTbzGZf-Q" points="[-1, 0, -145, 200]$[143, -200, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_28vToDx0EeayTaTbzGZf-Q" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_28vToTx0EeayTaTbzGZf-Q" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_9Rt4sDx0EeayTaTbzGZf-Q" type="4001" source="_1Z0vYjx0EeayTaTbzGZf-Q" target="_vvxWoDx0EeayTaTbzGZf-Q">
+    <styles xmi:type="notation:FontStyle" xmi:id="_9Rt4sTx0EeayTaTbzGZf-Q" fontName=".SF NS Text"/>
     <element xmi:type="datamapper:DataMapperLink" href="SFDCMapper.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.3/@outNode/@outgoingLink.0"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r1D9kjwREeayTaTbzGZf-Q" points="[-1, 0, -145, 163]$[143, -163, -1, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r1kT4DwREeayTaTbzGZf-Q" id="CENTER"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r1kT4TwREeayTaTbzGZf-Q" id="CENTER"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9Rt4sjx0EeayTaTbzGZf-Q" points="[-1, 0, -145, 161]$[143, -161, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9RufwDx0EeayTaTbzGZf-Q" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9RvG0Dx0EeayTaTbzGZf-Q" id="CENTER"/>
   </edges>
 </notation:Diagram>

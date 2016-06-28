@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="AccountBalanceDataService" groupId="io.edgarsilva.bank-dataservices.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/AccountBalanceDataService.dbs</file>
+    </artifact>
+</artifacts>

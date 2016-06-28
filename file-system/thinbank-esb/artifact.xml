@@ -5,4 +5,7 @@
     <artifact name="smooks-csv-transaction" groupId="br.com.edgarsilva.thinbank-esb.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/local-entries/smooks-csv-transaction.xml</file>
     </artifact>
+    <artifact name="simple" groupId="br.com.edgarsilva.thinbank-esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/simple.xml</file>
+    </artifact>
 </artifacts>

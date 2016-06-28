@@ -14,7 +14,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Liz",
-                    "LastName": "D'Cruz"
+                    "LastName": "D'Cruz",
+                    "Email": "ldcruz@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -23,7 +24,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "John",
-                    "LastName": "Bond"
+                    "LastName": "Bond",
+                    "Email": "bond_john@grandhotels.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -32,7 +34,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Rose",
-                    "LastName": "Gonzalez"
+                    "LastName": "Gonzalez",
+                    "Email": "rose@edge.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -41,7 +44,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Sean",
-                    "LastName": "Forbes"
+                    "LastName": "Forbes",
+                    "Email": "sean@edge.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -50,7 +54,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Babara",
-                    "LastName": "Levy"
+                    "LastName": "Levy",
+                    "Email": "b.levy@expressl&t.net"
                 },
                 {
                     "@type": "sf:sObject",
@@ -59,7 +64,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Avi",
-                    "LastName": "Green"
+                    "LastName": "Green",
+                    "Email": "agreen@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -68,7 +74,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Stella",
-                    "LastName": "Pavlova"
+                    "LastName": "Pavlova",
+                    "Email": "spavlova@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -77,7 +84,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Jane",
-                    "LastName": "Grey"
+                    "LastName": "Grey",
+                    "Email": "jane_gray@uoa.edu"
                 },
                 {
                     "@type": "sf:sObject",
@@ -86,7 +94,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Arthur",
-                    "LastName": "Song"
+                    "LastName": "Song",
+                    "Email": "asong@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -95,7 +104,10 @@
                         "@nil": "true"
                     },
                     "FirstName": "Siddartha",
-                    "LastName": "Nedaerk"
+                    "LastName": "Nedaerk",
+                    "Email": {
+                        "@nil": "true"
+                    }
                 },
                 {
                     "@type": "sf:sObject",
@@ -104,7 +116,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Lauren",
-                    "LastName": "Boyle"
+                    "LastName": "Boyle",
+                    "Email": "lboyle@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -113,7 +126,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Ashley",
-                    "LastName": "James"
+                    "LastName": "James",
+                    "Email": "ajames@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -122,7 +136,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Jack",
-                    "LastName": "Rogers"
+                    "LastName": "Rogers",
+                    "Email": "jrogers@burlington.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -131,7 +146,10 @@
                         "@nil": "true"
                     },
                     "FirstName": "Jake",
-                    "LastName": "Llorrac"
+                    "LastName": "Llorrac",
+                    "Email": {
+                        "@nil": "true"
+                    }
                 },
                 {
                     "@type": "sf:sObject",
@@ -140,7 +158,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Andy",
-                    "LastName": "Young"
+                    "LastName": "Young",
+                    "Email": "a_young@dickenson.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -149,7 +168,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Tim",
-                    "LastName": "Barr"
+                    "LastName": "Barr",
+                    "Email": "barr_tim@grandhotels.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -158,7 +178,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Josh",
-                    "LastName": "Davis"
+                    "LastName": "Davis",
+                    "Email": "j.davis@expressl&t.net"
                 },
                 {
                     "@type": "sf:sObject",
@@ -167,7 +188,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Tom",
-                    "LastName": "Ripley"
+                    "LastName": "Ripley",
+                    "Email": "tripley@uog.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -176,7 +198,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Edna",
-                    "LastName": "Frank"
+                    "LastName": "Frank",
+                    "Email": "efrank@genepoint.com"
                 },
                 {
                     "@type": "sf:sObject",
@@ -185,7 +208,8 @@
                         "@nil": "true"
                     },
                     "FirstName": "Pat",
-                    "LastName": "Stumuller"
+                    "LastName": "Stumuller",
+                    "Email": "pat@pyramid.net"
                 },
                 {
                     "@type": "sf:sObject",
@@ -194,7 +218,10 @@
                         "@nil": "true"
                     },
                     "FirstName": "Pedro",
-                    "LastName": "Rosa"
+                    "LastName": "Rosa",
+                    "Email": {
+                        "@nil": "true"
+                    }
                 }
             ],
             "size": 21

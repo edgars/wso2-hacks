@@ -1,0 +1,1 @@
+keytool -import -alias ans -file *.cer -keystore ans.store

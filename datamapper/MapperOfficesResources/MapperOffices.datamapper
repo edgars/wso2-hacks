@@ -1,304 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
   <input>
-    <treeNode name="soapenv:Envelope" level="1">
-      <node name="soapenv:Body" level="2">
-        <node name="company" level="3">
-          <node name="europeoffice" level="4">
-            <node name="address" level="5">
-              <node name="no" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/no"/>
+    <treeNode name="soapenv:Envelope" schemaDataType="OBJECT" level="1">
+      <node name="soapenv:Body" schemaDataType="OBJECT" level="2">
+        <node name="ns1:employees" schemaDataType="OBJECT" level="3">
+          <node name="ns1:employee" level="4">
+            <node name="ns1:firstname" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=ns1, url=http://wso2.employee.info}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:firstname"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="ns1:lastname" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=ns1, url=http://wso2.employee.info}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:lastname"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.1/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="ns2:addresses" schemaDataType="OBJECT" level="5">
+              <node name="ns2:address" level="6">
+                <node name="@location" schemaDataType="STRING" level="7">
+                  <properties key="type" value="string"/>
+                  <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location"/>
+                  <properties key="nullable" value="false"/>
+                  <outNode/>
+                  <inNode/>
+                </node>
+                <node name="ns2:city" schemaDataType="OBJECT" level="7">
+                  <node name="@postalcode" schemaDataType="NUMBER" level="8">
+                    <properties key="type" value="number"/>
+                    <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode"/>
+                    <properties key="nullable" value="false"/>
+                    <outNode/>
+                    <inNode/>
+                  </node>
+                  <properties key="namespaces" value="{prefix=ns2, url=http://wso2.employee.address}"/>
+                  <properties key="type" value="object"/>
+                  <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city"/>
+                  <properties key="object_value_type" value="string"/>
+                  <properties key="nullable" value="false"/>
+                  <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode]}"/>
+                  <properties key="attribute_type" value="{attribute_type=[number]}"/>
+                  <outNode/>
+                  <inNode/>
+                </node>
+                <node name="ns2:road" schemaDataType="STRING" level="7">
+                  <properties key="namespaces" value="{prefix=ns2, url=http://wso2.employee.address}"/>
+                  <properties key="type" value="string"/>
+                  <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road"/>
+                  <properties key="nullable" value="false"/>
+                  <outNode/>
+                  <inNode/>
+                </node>
+                <properties key="namespaces" value="{prefix=ns2, url=http://wso2.employee.address}"/>
+                <properties key="type" value="array"/>
+                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address"/>
+                <properties key="items_id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0"/>
+                <properties key="items_type" value="object"/>
+                <properties key="nullable" value="false"/>
+                <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location]}"/>
+                <properties key="attribute_type" value="{attribute_type=[string]}"/>
+                <properties key="properties_id" value="{ns2:city={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city, type=object, value={type=string}, attributes={postalcode={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode, type=number}}}, ns2:road={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road, type=string}}"/>
                 <outNode/>
                 <inNode/>
               </node>
-              <node name="country" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/country"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="code" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/code"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="city" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/city"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="street" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street"/>
-                <outNode>
-                  <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
-                </outNode>
-                <inNode/>
-              </node>
+              <properties key="namespaces" value="{prefix=ns2, url=http://wso2.employee.address}"/>
               <properties key="type" value="object"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address"/>
-              <properties key="properties_id" value="{no={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/no, type=string}, country={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/code, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street, type=string}}"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses"/>
+              <properties key="nullable" value="false"/>
+              <properties key="properties_id" value="{ns2:address={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0, type=object, properties={ns2:city={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city, type=object, value={type=string}, attributes={postalcode={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode, type=number}}}, ns2:road={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road, type=string}}, attributes={location={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location, type=string}}}]}}"/>
               <outNode/>
               <inNode/>
             </node>
-            <node name="phone" level="5">
-              <properties key="type" value="string"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice/phone"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <properties key="type" value="object"/>
-            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/europeoffice"/>
+            <properties key="namespaces" value="{prefix=ns1, url=http://wso2.employee.info}"/>
+            <properties key="type" value="array"/>
+            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee"/>
+            <properties key="items_id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0"/>
+            <properties key="items_type" value="object"/>
+            <properties key="nullable" value="false"/>
+            <properties key="properties_id" value="{ns1:firstname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:firstname, type=string}, ns1:lastname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:lastname, type=string}, ns2:addresses={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses, type=object, properties={ns2:address={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0, type=object, properties={ns2:city={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city, type=object, value={type=string}, attributes={postalcode={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode, type=number}}}, ns2:road={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road, type=string}}, attributes={location={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location, type=string}}}]}}}}"/>
             <outNode/>
             <inNode/>
           </node>
-          <node name="asiaoffice" level="4">
-            <node name="address" level="5">
-              <node name="no" level="6">
-                <properties key="type" value="number"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/no"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="country" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/country"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="code" level="6">
-                <properties key="type" value="number"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/code"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="city" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/city"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="street" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/street"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <properties key="type" value="object"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address"/>
-              <properties key="properties_id" value="{no={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/street, type=string}}"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <node name="phone" level="5">
-              <properties key="type" value="string"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/phone"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <node name="fax" level="5">
-              <properties key="type" value="string"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/fax"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <properties key="type" value="object"/>
-            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/asiaoffice"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="usoffice" level="4">
-            <node name="address" level="5">
-              <node name="no" level="6">
-                <properties key="type" value="number"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/no"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="country" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/country"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="code" level="6">
-                <properties key="type" value="number"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/code"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="city" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/city"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <node name="street" level="6">
-                <properties key="type" value="string"/>
-                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/street"/>
-                <outNode/>
-                <inNode/>
-              </node>
-              <properties key="type" value="object"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/address"/>
-              <properties key="properties_id" value="{no={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/street, type=string}}"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <node name="phone" level="5">
-              <properties key="type" value="string"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/phone"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <node name="fax" level="5">
-              <properties key="type" value="string"/>
-              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice/fax"/>
-              <outNode/>
-              <inNode/>
-            </node>
-            <properties key="type" value="object"/>
-            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/usoffice"/>
-            <properties key="properties_id" value="{address={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/no, type=string}, country={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/code, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/phone, type=string}}"/>
-            <properties key="properties_id" value="{address={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/fax, type=string}}"/>
-            <properties key="properties_id" value="{address={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/fax, type=string}}"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="name" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company/name"/>
-            <outNode/>
-            <inNode/>
-          </node>
+          <properties key="namespaces" value="{prefix=ns1, url=http://wso2.employee.info}"/>
           <properties key="type" value="object"/>
-          <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/company"/>
-          <properties key="properties_id" value="{europeoffice={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/no, type=string}, country={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/code, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/phone, type=string}}}, asiaoffice={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/fax, type=string}}}, usoffice={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/fax, type=string}}}, name={id=http://wso2jsonschema.org/soapenv:Body/company/name, type=string}}"/>
+          <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns1:employees"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{ns1:employee={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0, type=object, properties={ns1:firstname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:firstname, type=string}, ns1:lastname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:lastname, type=string}, ns2:addresses={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses, type=object, properties={ns2:address={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0, type=object, properties={ns2:city={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city, type=object, value={type=string}, attributes={postalcode={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode, type=number}}}, ns2:road={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road, type=string}}, attributes={location={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location, type=string}}}]}}}}}]}}"/>
           <outNode/>
           <inNode/>
         </node>
+        <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
         <properties key="type" value="object"/>
         <properties key="id" value="http://wso2jsonschema.org/soapenv:Body"/>
-        <properties key="properties_id" value="{company={id=http://wso2jsonschema.org/soapenv:Body/company, type=object, properties={europeoffice={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/no, type=string}, country={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/code, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/europeoffice/phone, type=string}}}, asiaoffice={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/asiaoffice/fax, type=string}}}, usoffice={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice, type=object, properties={address={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address, type=object, properties={no={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/no, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/country, type=string}, code={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/code, type=number}, city={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/address/street, type=string}}}, phone={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/phone, type=string}, fax={id=http://wso2jsonschema.org/soapenv:Body/company/usoffice/fax, type=string}}}, name={id=http://wso2jsonschema.org/soapenv:Body/company/name, type=string}}}}"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{ns1:employees={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees, type=object, properties={ns1:employee={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0, type=object, properties={ns1:firstname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:firstname, type=string}, ns1:lastname={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns1:lastname, type=string}, ns2:addresses={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses, type=object, properties={ns2:address={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0, type=object, properties={ns2:city={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:city, type=object, value={type=string}, attributes={postalcode={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/postalcode, type=number}}}, ns2:road={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/ns2:road, type=string}}, attributes={location={id=http://wso2jsonschema.org/soapenv:Body/ns1:employees/ns1:employee/0/ns2:addresses/ns2:address/0/location, type=string}}}]}}}}}]}}}}"/>
         <outNode/>
         <inNode/>
       </node>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/},{prefix=ns2, url=http://wso2.employee.address},{prefix=ns1, url=http://wso2.employee.info}"/>
       <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
       <properties key="type" value="object"/>
       <properties key="$schema" value="http://json-schema.org/draft-04/schema#"/>
       <properties key="id" value="http://wso2jsonschema.org"/>
-      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+      <properties key="nullable" value="false"/>
       <outNode/>
       <inNode/>
     </treeNode>
   </input>
   <output>
-    <treeNode name="company" level="1">
-      <node name="offices" level="2">
-        <node name="usoffice" level="3">
-          <node name="address" level="4">
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="engineers" schemaDataType="OBJECT" level="2">
+        <node name="engineerList" level="3">
+          <node name="fullname" schemaDataType="STRING" level="4">
             <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/usoffice/address"/>
+            <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/fullname"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="addresses" schemaDataType="OBJECT" level="4">
+            <node name="address" level="5">
+              <node name="location" schemaDataType="STRING" level="6">
+                <properties key="type" value="string"/>
+                <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <node name="city" schemaDataType="OBJECT" level="6">
+                <node name="postalcode" schemaDataType="NUMBER" level="7">
+                  <properties key="type" value="number"/>
+                  <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode"/>
+                  <properties key="nullable" value="false"/>
+                  <outNode/>
+                  <inNode/>
+                </node>
+                <node name="text" schemaDataType="STRING" level="7">
+                  <properties key="type" value="string"/>
+                  <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text"/>
+                  <properties key="nullable" value="false"/>
+                  <outNode/>
+                  <inNode/>
+                </node>
+                <properties key="type" value="object"/>
+                <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city"/>
+                <properties key="nullable" value="false"/>
+                <properties key="properties_id" value="{postalcode={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode, type=number}, text={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text, type=string}}"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <node name="road" schemaDataType="STRING" level="6">
+                <properties key="type" value="string"/>
+                <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="type" value="array"/>
+              <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address"/>
+              <properties key="items_id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0"/>
+              <properties key="items_type" value="object"/>
+              <properties key="nullable" value="false"/>
+              <properties key="properties_id" value="{location={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location, type=string}, city={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city, type=object, properties={postalcode={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode, type=number}, text={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text, type=string}}}, road={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road, type=string}}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <properties key="type" value="object"/>
+            <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList/0/addresses"/>
+            <properties key="nullable" value="false"/>
+            <properties key="properties_id" value="{address={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address, type=array, items=[{id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0, type=object, properties={location={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location, type=string}, city={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city, type=object, properties={postalcode={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode, type=number}, text={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text, type=string}}}, road={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road, type=string}}}]}}"/>
             <outNode/>
             <inNode/>
           </node>
-          <node name="phone" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/usoffice/phone"/>
-            <outNode/>
-            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
-          </node>
-          <node name="fax" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/usoffice/fax"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <properties key="type" value="object"/>
-          <properties key="id" value="http://jsonschema.net/offices/usoffice"/>
-          <properties key="required" value="address,phone,fax"/>
-          <outNode/>
-          <inNode/>
-        </node>
-        <node name="europeoffice" level="3">
-          <node name="address" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/europeoffice/address"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="phone" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/europeoffice/phone"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="fax" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/europeoffice/fax"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <properties key="type" value="object"/>
-          <properties key="id" value="http://jsonschema.net/offices/europeoffice"/>
-          <outNode/>
-          <inNode/>
-        </node>
-        <node name="asiaoffice" level="3">
-          <node name="address" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/asiaoffice/address"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="phone" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/asiaoffice/phone"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <node name="fax" level="4">
-            <properties key="type" value="string"/>
-            <properties key="id" value="http://jsonschema.net/offices/asiaoffice/fax"/>
-            <outNode/>
-            <inNode/>
-          </node>
-          <properties key="type" value="object"/>
-          <properties key="id" value="http://jsonschema.net/offices/asiaoffice"/>
-          <properties key="properties_id" value="{address={id=http://jsonschema.net/offices/usoffice/address, type=string}, phone={id=http://jsonschema.net/offices/usoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/usoffice/fax, type=string}}"/>
-          <properties key="properties_id" value="{address={id=http://jsonschema.net/offices/europeoffice/address, type=string}, phone={id=http://jsonschema.net/offices/europeoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/europeoffice/fax, type=string}}"/>
-          <properties key="properties_id" value="{address={id=http://jsonschema.net/offices/asiaoffice/address, type=string}, phone={id=http://jsonschema.net/offices/asiaoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/asiaoffice/fax, type=string}}"/>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/engineers/engineerList"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/engineers/engineerList/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{fullname={id=http://wso2jsonschema.org/engineers/engineerList/0/fullname, type=string}, addresses={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses, type=object, properties={address={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address, type=array, items=[{id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0, type=object, properties={location={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location, type=string}, city={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city, type=object, properties={postalcode={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode, type=number}, text={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text, type=string}}}, road={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road, type=string}}}]}}}}"/>
           <outNode/>
           <inNode/>
         </node>
         <properties key="type" value="object"/>
-        <properties key="id" value="http://jsonschema.net/offices"/>
-        <properties key="required" value="usoffice,europeoffice,asiaoffice"/>
-        <properties key="properties_id" value="{usoffice={id=http://jsonschema.net/offices/usoffice, type=object, properties={address={id=http://jsonschema.net/offices/usoffice/address, type=string}, phone={id=http://jsonschema.net/offices/usoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/usoffice/fax, type=string}}, required=[address, phone, fax]}, europeoffice={id=http://jsonschema.net/offices/europeoffice, type=object, properties={address={id=http://jsonschema.net/offices/europeoffice/address, type=string}, phone={id=http://jsonschema.net/offices/europeoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/europeoffice/fax, type=string}}}, asiaoffice={id=http://jsonschema.net/offices/asiaoffice, type=object, properties={address={id=http://jsonschema.net/offices/asiaoffice/address, type=string}, phone={id=http://jsonschema.net/offices/asiaoffice/phone, type=string}, fax={id=http://jsonschema.net/offices/asiaoffice/fax, type=string}}}}"/>
+        <properties key="id" value="http://wso2jsonschema.org/engineers"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{engineerList={id=http://wso2jsonschema.org/engineers/engineerList, type=array, items=[{id=http://wso2jsonschema.org/engineers/engineerList/0, type=object, properties={fullname={id=http://wso2jsonschema.org/engineers/engineerList/0/fullname, type=string}, addresses={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses, type=object, properties={address={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address, type=array, items=[{id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0, type=object, properties={location={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/location, type=string}, city={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city, type=object, properties={postalcode={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/postalcode, type=number}, text={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/city/text, type=string}}}, road={id=http://wso2jsonschema.org/engineers/engineerList/0/addresses/address/0/road, type=string}}}]}}}}}]}}"/>
         <outNode/>
         <inNode/>
       </node>
       <properties key="type" value="object"/>
       <properties key="$schema" value="http://json-schema.org/draft-04/schema#"/>
-      <properties key="id" value="http://jsonschema.net"/>
-      <properties key="required" value="offices"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
       <outNode/>
       <inNode/>
     </treeNode>
   </output>
-  <operators xsi:type="datamapper:UpperCase">
+  <operators xsi:type="datamapper:Concat" defaultInputConnectors="2" defaultOutputConnectors="1" inputSizeFixed="false" operatorType="CONCAT">
     <basicContainer>
       <leftContainer>
         <leftConnectors>
-          <inNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
         </leftConnectors>
       </leftContainer>
       <rightContainer>
         <rightConnectors>
-          <outNode/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.0/@inNode"/>
+          </outNode>
         </rightConnectors>
       </rightContainer>
     </basicContainer>
