@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="queryResponse" schemaDataType="OBJECT" level="2">
+        <node name="result" schemaDataType="OBJECT" level="3">
+          <node name="@type" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="done" schemaDataType="BOOLEAN" level="4">
+            <properties key="type" value="boolean"/>
+            <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/done"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="queryLocator" schemaDataType="OBJECT" level="4">
+            <node name="@nil" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/nil"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <properties key="type" value="object"/>
+            <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/queryLocator"/>
+            <properties key="nullable" value="false"/>
+            <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/queryResponse/result/nil]}"/>
+            <properties key="attribute_type" value="{attribute_type=[string]}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="records" level="4">
+            <node name="@type" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/type"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="type" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/type"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="Id" schemaDataType="OBJECT" level="5">
+              <node name="@nil" schemaDataType="STRING" level="6">
+                <properties key="type" value="string"/>
+                <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/Id"/>
+              <properties key="nullable" value="false"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/queryResponse/result/records/0/nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[string]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="FirstName" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/FirstName"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="LastName" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/LastName"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="Email" schemaDataType="OBJECT" level="5">
+              <node name="@nil" schemaDataType="STRING" level="6">
+                <properties key="type" value="string"/>
+                <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records/0/Email"/>
+              <properties key="nullable" value="false"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/queryResponse/result/records/0/nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[string]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <properties key="type" value="array"/>
+            <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/records"/>
+            <properties key="items_id" value="http://wso2jsonschema.org/queryResponse/result/records/0"/>
+            <properties key="items_type" value="object"/>
+            <properties key="nullable" value="false"/>
+            <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/queryResponse/result/records/0/type]}"/>
+            <properties key="attribute_type" value="{attribute_type=[string]}"/>
+            <properties key="properties_id" value="{type={id=http://wso2jsonschema.org/queryResponse/result/records/0/type, type=string}, Id={id=http://wso2jsonschema.org/queryResponse/result/records/0/Id, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}, FirstName={id=http://wso2jsonschema.org/queryResponse/result/records/0/FirstName, type=string}, LastName={id=http://wso2jsonschema.org/queryResponse/result/records/0/LastName, type=string}, Email={id=http://wso2jsonschema.org/queryResponse/result/records/0/Email, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="size" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/queryResponse/result/size"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/queryResponse/result"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/queryResponse/result/type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <properties key="properties_id" value="{done={id=http://wso2jsonschema.org/queryResponse/result/done, type=boolean}, queryLocator={id=http://wso2jsonschema.org/queryResponse/result/queryLocator, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/nil, type=string}}}, records={id=http://wso2jsonschema.org/queryResponse/result/records, type=array, items=[{id=http://wso2jsonschema.org/queryResponse/result/records/0, type=object, attributes={type={id=http://wso2jsonschema.org/queryResponse/result/records/0/type, type=string}}, properties={type={id=http://wso2jsonschema.org/queryResponse/result/records/0/type, type=string}, Id={id=http://wso2jsonschema.org/queryResponse/result/records/0/Id, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}, FirstName={id=http://wso2jsonschema.org/queryResponse/result/records/0/FirstName, type=string}, LastName={id=http://wso2jsonschema.org/queryResponse/result/records/0/LastName, type=string}, Email={id=http://wso2jsonschema.org/queryResponse/result/records/0/Email, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}}}]}, size={id=http://wso2jsonschema.org/queryResponse/result/size, type=number}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/queryResponse"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{result={id=http://wso2jsonschema.org/queryResponse/result, type=object, attributes={type={id=http://wso2jsonschema.org/queryResponse/result/type, type=string}}, properties={done={id=http://wso2jsonschema.org/queryResponse/result/done, type=boolean}, queryLocator={id=http://wso2jsonschema.org/queryResponse/result/queryLocator, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/nil, type=string}}}, records={id=http://wso2jsonschema.org/queryResponse/result/records, type=array, items=[{id=http://wso2jsonschema.org/queryResponse/result/records/0, type=object, attributes={type={id=http://wso2jsonschema.org/queryResponse/result/records/0/type, type=string}}, properties={type={id=http://wso2jsonschema.org/queryResponse/result/records/0/type, type=string}, Id={id=http://wso2jsonschema.org/queryResponse/result/records/0/Id, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}, FirstName={id=http://wso2jsonschema.org/queryResponse/result/records/0/FirstName, type=string}, LastName={id=http://wso2jsonschema.org/queryResponse/result/records/0/LastName, type=string}, Email={id=http://wso2jsonschema.org/queryResponse/result/records/0/Email, type=object, attributes={nil={id=http://wso2jsonschema.org/queryResponse/result/records/0/nil, type=string}}}}}]}, size={id=http://wso2jsonschema.org/queryResponse/result/size, type=number}}}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://json-schema.org/draft-04/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="contacts" schemaDataType="OBJECT" level="2">
+        <node name="list" level="3">
+          <node name="type" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/contacts/list/0/type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="FullName" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/contacts/list/0/FullName"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.3/@node.3/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="Email" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/contacts/list/0/Email"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/contacts/list"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/contacts/list/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{type={id=http://wso2jsonschema.org/contacts/list/0/type, type=string}, FullName={id=http://wso2jsonschema.org/contacts/list/0/FullName, type=string}, Email={id=http://wso2jsonschema.org/contacts/list/0/Email, type=string}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="size" schemaDataType="NUMBER" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/contacts/size"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/contacts"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{list={id=http://wso2jsonschema.org/contacts/list, type=array, items=[{id=http://wso2jsonschema.org/contacts/list/0, type=object, properties={type={id=http://wso2jsonschema.org/contacts/list/0/type, type=string}, FullName={id=http://wso2jsonschema.org/contacts/list/0/FullName, type=string}, Email={id=http://wso2jsonschema.org/contacts/list/0/Email, type=string}}}]}, size={id=http://wso2jsonschema.org/contacts/size, type=number}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://json-schema.org/draft-04/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

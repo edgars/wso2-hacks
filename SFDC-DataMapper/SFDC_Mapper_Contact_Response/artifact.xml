@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="SFDCMapper" groupId="com.example.SFDCResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+    <artifact name="SFDCMapper" groupId="com.example.SFDC_Mapper_Contact_Response.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
         <item>
             <file>SFDCMapper.dmc</file>
             <path>/_system/governance/datamapper</path>
             <mediaType>text/plain</mediaType>
         </item>
     </artifact>
-    <artifact name="SFDCMapper_inputSchema" groupId="com.example.SFDCResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+    <artifact name="SFDCMapper_inputSchema" groupId="com.example.SFDC_Mapper_Contact_Response.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
         <item>
             <file>SFDCMapper_inputSchema.json</file>
             <path>/_system/governance/datamapper</path>
             <mediaType>text/plain</mediaType>
         </item>
     </artifact>
-    <artifact name="SFDCMapper_outputSchema" groupId="com.example.SFDCResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+    <artifact name="SFDCMapper_outputSchema" groupId="com.example.SFDC_Mapper_Contact_Response.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
         <item>
             <file>SFDCMapper_outputSchema.json</file>
             <path>/_system/governance/datamapper</path>

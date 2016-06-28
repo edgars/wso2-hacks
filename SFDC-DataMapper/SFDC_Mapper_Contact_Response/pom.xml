@@ -2,12 +2,12 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example.SFDCResources</groupId>
-  <artifactId>SFDCResources</artifactId>
+  <groupId>com.example.SFDC_Mapper_Contact_Response</groupId>
+  <artifactId>SFDC_Mapper_Contact_Response</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>SFDCResources</name>
-  <description>SFDCResources</description>
+  <name>SFDC_Mapper_Contact_Response</name>
+  <description>SFDC_Mapper_Contact_Response</description>
   <properties>
     <maven.test.skip>false</maven.test.skip>
     <CApp.type>bpel/workflow=zip,lib/registry/filter=jar,webapp/jaxws=war,lib/library/bundle=jar,service/dataservice=dbs,synapse/local-entry=xml,synapse/proxy-service=xml,carbon/application=car,registry/resource=zip,lib/dataservice/validator=jar,synapse/endpoint=xml,web/application=war,lib/carbon/ui=jar,service/axis2=aar,synapse/sequence=xml,event/stream=json,event/publisher=xml,event/receiver=xml,event/execution-plan=siddhiql,synapse/configuration=xml,wso2/gadget=dar,lib/registry/handlers=jar,lib/synapse/mediator=jar</CApp.type>

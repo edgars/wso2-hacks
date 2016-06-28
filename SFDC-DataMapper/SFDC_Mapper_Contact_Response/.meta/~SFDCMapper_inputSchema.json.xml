@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="SFDCMapper_inputSchema.json" isCollection="false" path="/_system/governance/datamapper/SFDC_Mapper_Contact_Response/SFDCMapper_inputSchema.json" registryUrl="https://localhost:9443/registry" status="added">
+    <mediaType>application/json</mediaType>
+</resource>
