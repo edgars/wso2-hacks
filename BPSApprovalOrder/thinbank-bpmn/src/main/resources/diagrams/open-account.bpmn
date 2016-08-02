@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/thinbank">
+  <process id="open-account-process" name="Open Account for Customers Process" isExecutable="true">
+    <documentation>Process for Opening new Accounts in Bank</documentation>
+    <startEvent id="Start" name="Start Open Account ">
+      <extensionElements>
+        <activiti:formProperty id="customerEmail" name="E-Mail" type="string" variable="customerEmail" required="true"></activiti:formProperty>
+        <activiti:formProperty id="name" name="Name" type="string" variable="name"></activiti:formProperty>
+        <activiti:formProperty id="initialDeposit" name="Initial Deposit" type="double" variable="initialDeposit"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <exclusiveGateway id="exclusivegateway1" name="DecisaoTipoDeConta" default="Default"></exclusiveGateway>
+    <sequenceFlow id="flow1" sourceRef="Start" targetRef="exclusivegateway1"></sequenceFlow>
+    <userTask id="taskStyle" name="Premium Account" activiti:candidateGroups="premium-managers">
+      <extensionElements>
+        <activiti:formProperty id="customerEmail" name="Prospect E-Mail" type="string" variable="customerEmail" writable="false" required="true"></activiti:formProperty>
+        <activiti:formProperty id="name" name="Name" type="string" variable="name" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="initialDeposit" name="Initial Deposit" type="double" variable="initialDeposit" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="managerName" name="Manager Name (Premium Account)" type="string" variable="managerName"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="Style" sourceRef="exclusivegateway1" targetRef="taskStyle">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${initialDeposit > 10000}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="starndardTask" name="Default Account" activiti:candidateGroups="default-managers">
+      <extensionElements>
+        <activiti:formProperty id="customerEmail" name="Prospect E-Mail" type="string" variable="customerEmail" writable="false" required="true"></activiti:formProperty>
+        <activiti:formProperty id="name" name="Name" type="string" variable="name" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="initialDeposit" name="Initial Deposit" type="double" variable="initialDeposit" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="managerName" name="Manager Name (Standard Accounts)" type="string" variable="managerName"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="Default" sourceRef="exclusivegateway1" targetRef="starndardTask"></sequenceFlow>
+    <serviceTask id="mailtask1" name="NotifyCustomer" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="html">
+          <activiti:expression><![CDATA[Sua conta será gerenciada pelo cliente ${managerName}
+
+Agradecemos por usar o ThinBank]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[Sua conta será gerenciada pelo cliente ${managerName}
+
+Agradecemos por usar o ThinBank]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Abertura de Conta Corrente]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${customerEmail}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[edgar@wso2.com]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow4" sourceRef="starndardTask" targetRef="mailtask1"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="taskStyle" targetRef="mailtask1"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow6" sourceRef="mailtask1" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_open-account-process">
+    <bpmndi:BPMNPlane bpmnElement="open-account-process" id="BPMNPlane_open-account-process">
+      <bpmndi:BPMNShape bpmnElement="Start" id="BPMNShape_Start">
+        <omgdc:Bounds height="35.0" width="35.0" x="80.0" y="250.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="160.0" y="248.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="taskStyle" id="BPMNShape_taskStyle">
+        <omgdc:Bounds height="55.0" width="105.0" x="260.0" y="330.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="starndardTask" id="BPMNShape_starndardTask">
+        <omgdc:Bounds height="55.0" width="105.0" x="260.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask1" id="BPMNShape_mailtask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="510.0" y="230.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="660.0" y="240.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="115.0" y="267.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="268.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="Style" id="BPMNEdge_Style">
+        <omgdi:waypoint x="180.0" y="288.0"></omgdi:waypoint>
+        <omgdi:waypoint x="180.0" y="357.0"></omgdi:waypoint>
+        <omgdi:waypoint x="260.0" y="357.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="Default" id="BPMNEdge_Default">
+        <omgdi:waypoint x="180.0" y="248.0"></omgdi:waypoint>
+        <omgdi:waypoint x="179.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="260.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="365.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="562.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="562.0" y="230.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="365.0" y="357.0"></omgdi:waypoint>
+        <omgdi:waypoint x="562.0" y="357.0"></omgdi:waypoint>
+        <omgdi:waypoint x="562.0" y="285.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="615.0" y="257.0"></omgdi:waypoint>
+        <omgdi:waypoint x="660.0" y="257.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

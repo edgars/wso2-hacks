@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="PagamentoReservaWSProxy" groupId="br.com.edgarsilva.eip-esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/PagamentoReservaWSProxy.xml</file>
+    </artifact>
+    <artifact name="ReservarAssentoWSProxy" groupId="br.com.edgarsilva.eip-esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/ReservarAssentoWSProxy.xml</file>
+    </artifact>
+    <artifact name="GerarCheckinWSProxy" groupId="br.com.edgarsilva.eip-esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/GerarCheckinWSProxy.xml</file>
+    </artifact>
+    <artifact name="CentralMessageStore" groupId="br.com.edgarsilva.eip-esb.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/CentralMessageStore.xml</file>
+    </artifact>
+    <artifact name="FilaCentralJMSEndpoint" groupId="br.com.edgarsilva.eip-esb.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/FilaCentralJMSEndpoint.xml</file>
+    </artifact>
+    <artifact name="thin-linhas-aereas" groupId="br.com.edgarsilva.eip-esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/thin-linhas-aereas.xml</file>
+    </artifact>
+    <artifact name="EnviarTransacaoWSProxy" groupId="br.com.edgarsilva.eip-esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/EnviarTransacaoWSProxy.xml</file>
+    </artifact>
+    <artifact name="sequence-resolve-falhas" groupId="br.com.edgarsilva.eip-esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/sequence-resolve-falhas.xml</file>
+    </artifact>
+</artifacts>

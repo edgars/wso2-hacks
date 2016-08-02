@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="ReservarAssentoWSProxy" startOnLoad="true" trace="disable"
+  transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <inSequence>
+      <log/>
+      <payloadFactory description="ReservaPayload" media-type="xml">
+        <format>
+          <reserva>
+            <localizador>JO111</localizador>
+            <assento>14F</assento>
+          </reserva>
+        </format>
+        <args/>
+      </payloadFactory>
+      <respond description="retorno"/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </target>
+</proxy>

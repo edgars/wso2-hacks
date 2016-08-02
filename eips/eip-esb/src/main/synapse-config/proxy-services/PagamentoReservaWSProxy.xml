@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="PagamentoReservaWSProxy" startOnLoad="true" trace="disable"
+  transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <inSequence>
+      <payloadFactory description="Pagamaento" media-type="xml">
+        <format>
+          <pagamento>
+            <localizador>J0111</localizador>
+            <autorizacao>998131ndajhdajhda10093434343aada@3311</autorizacao>
+          </pagamento>
+        </format>
+        <args/>
+      </payloadFactory>
+      <respond description="pa"/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </target>
+</proxy>

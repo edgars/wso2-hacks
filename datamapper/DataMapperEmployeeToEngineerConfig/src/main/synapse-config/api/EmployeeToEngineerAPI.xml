@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/convert" name="EmployeeToEngineerAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="POST">
+    <resource methods="POST GET" url-mapping="/convert">
         <inSequence>
             <datamapper config="gov:datamapper/MapperOffices.dmc" description="Mapper" inputSchema="gov:datamapper/MapperOffices_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/MapperOffices_outputSchema.json" outputType="JSON"/>
             <property description="JSON" name="messageType" scope="axis2" type="STRING" value="application/json"/>

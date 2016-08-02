@@ -2,14 +2,8 @@ map_S_root_S_root = function(){
 var outputroot={};
 
 
-
-
-
-
 outputroot = {};
 outputroot.contacts = {};
-
-
 
 
 outputroot.contacts.list = [];
@@ -18,10 +12,7 @@ for(i_records in inputroot.queryResponse.result.records){
 
 outputroot.contacts.list[i_records] = {};
 
-
-
-
-outputroot.contacts.list[i_records].FullName = inputroot.queryResponse.result.records[i_records].FirstName;
+utputroot.contacts.list[i_records].FullName = inputroot.queryResponse.result.records[i_records].FirstName;
 
 }
 return outputroot;

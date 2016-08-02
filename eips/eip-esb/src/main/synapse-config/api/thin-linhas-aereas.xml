@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/compra" name="thin-linhas-aereas" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="POST" protocol="http">
+    <inSequence>
+      <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+      <log/>
+      <call>
+        <endpoint key="FilaCentralJMSEndpoint"/>
+      </call>
+      <payloadFactory description="RETORNO" media-type="xml">
+        <format>
+          <RESPOSTA xmlns="">OK</RESPOSTA>
+        </format>
+        <args/>
+      </payloadFactory>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

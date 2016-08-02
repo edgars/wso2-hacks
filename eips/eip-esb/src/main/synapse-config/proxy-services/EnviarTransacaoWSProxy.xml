@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="EnviarTransacaoWSProxy" startOnLoad="true" trace="disable"
+  transports="jms" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <inSequence>
+      <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+      <log description="FULL" level="full"/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </target>
+  <parameter name="transport.jms.Destination">FilaCentral</parameter>
+  <parameter name="transport.jms.ContentType">
+    <rules>
+      <jmsProperty>contentType</jmsProperty>
+      <default>text/plain</default>
+    </rules>
+  </parameter>
+</proxy>

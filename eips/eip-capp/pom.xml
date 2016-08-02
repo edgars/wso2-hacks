@@ -2,34 +2,62 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.edgarsilva.thinbank-fs</groupId>
-  <artifactId>thinbank-fs</artifactId>
+  <groupId>br.com.edgarsilva.eip-capp</groupId>
+  <artifactId>eip-capp</artifactId>
   <version>1.0.0</version>
   <packaging>carbon/application</packaging>
-  <name>thinbank-fs</name>
-  <description>thinbank-fs</description>
+  <name>eip-capp</name>
+  <description>eip-capp</description>
   <properties>
-    <br.com.edgarsilva.thinbank-esb.proxy-service_._TransactionsFileListenerProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.thinbank-esb.proxy-service_._TransactionsFileListenerProxy>
-    <br.com.edgarsilva.thinbank-esb.local-entry_._smooks-csv-transaction>capp/EnterpriseServiceBus</br.com.edgarsilva.thinbank-esb.local-entry_._smooks-csv-transaction>
-    <br.com.edgarsilva.thinbank-esb.api_._simple>capp/EnterpriseServiceBus</br.com.edgarsilva.thinbank-esb.api_._simple>
-    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <br.com.edgarsilva.eip-esb.proxy-service_._EnviarTransacaoWSProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.proxy-service_._EnviarTransacaoWSProxy>
+    <br.com.edgarsilva.eip-esb.message-store_._CentralMessageStore>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.message-store_._CentralMessageStore>
+    <br.com.edgarsilva.eip-esb.proxy-service_._PagamentoReservaWSProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.proxy-service_._PagamentoReservaWSProxy>
+    <br.com.edgarsilva.eip-esb.api_._thin-linhas-aereas>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.api_._thin-linhas-aereas>
+    <br.com.edgarsilva.eip-esb.proxy-service_._GerarCheckinWSProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.proxy-service_._GerarCheckinWSProxy>
+    <br.com.edgarsilva.eip-esb.proxy-service_._ReservarAssentoWSProxy>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.proxy-service_._ReservarAssentoWSProxy>
+    <br.com.edgarsilva.eip-esb.endpoint_._FilaCentralJMSEndpoint>capp/EnterpriseServiceBus</br.com.edgarsilva.eip-esb.endpoint_._FilaCentralJMSEndpoint>
+    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,lib/registry/handlers=jar,service/rule=aar,lib/registry/filter=jar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,synapse/api=xml,wso2/gadget=dar,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>br.com.edgarsilva.thinbank-esb.api</groupId>
-      <artifactId>simple</artifactId>
+      <groupId>br.com.edgarsilva.eip-esb.proxy-service</groupId>
+      <artifactId>ReservarAssentoWSProxy</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>br.com.edgarsilva.thinbank-esb.local-entry</groupId>
-      <artifactId>smooks-csv-transaction</artifactId>
+      <groupId>br.com.edgarsilva.eip-esb.proxy-service</groupId>
+      <artifactId>PagamentoReservaWSProxy</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>br.com.edgarsilva.thinbank-esb.proxy-service</groupId>
-      <artifactId>TransactionsFileListenerProxy</artifactId>
+      <groupId>br.com.edgarsilva.eip-esb.proxy-service</groupId>
+      <artifactId>GerarCheckinWSProxy</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.eip-esb.api</groupId>
+      <artifactId>thin-linhas-aereas</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.eip-esb.endpoint</groupId>
+      <artifactId>FilaCentralJMSEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.eip-esb.message-store</groupId>
+      <artifactId>CentralMessageStore</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>br.com.edgarsilva.eip-esb.proxy-service</groupId>
+      <artifactId>EnviarTransacaoWSProxy</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -87,7 +115,7 @@
       <plugin>
         <groupId>org.wso2.maven</groupId>
         <artifactId>maven-car-plugin</artifactId>
-        <version>2.1.0</version>
+        <version>2.1.1</version>
         <extensions>true</extensions>
         <executions>
           <execution>
@@ -103,7 +131,7 @@
       <plugin>
         <groupId>org.wso2.maven</groupId>
         <artifactId>maven-car-deploy-plugin</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
         <extensions>true</extensions>
         <configuration>
           <carbonServers>

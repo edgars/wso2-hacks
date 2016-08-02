@@ -18,7 +18,7 @@
                 </statement>
             </dblookup>
             <property expression="//p:text" name="conteudo" scope="default" type="STRING" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
-            <script language="js"><![CDATA[var conteudo = mc.getProperty("conteudo") ;
+            <script description="" language="js"><![CDATA[var conteudo = mc.getProperty("conteudo") ;
                  print(" Content from Payload :  " + conteudo );]]></script>
             <smooks config-key="smooks-csv-transaction" description="ConvertCSV">
                 <input type="text"/>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="GerarCheckinWSProxy" startOnLoad="true" trace="disable"
+  transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <inSequence>
+      <payloadFactory description="CHECKIN" media-type="xml">
+        <format>
+          <checkin>
+            <barcode>908989898139813981983918391839183918391839183918</barcode>
+          </checkin>
+        </format>
+        <args/>
+      </payloadFactory>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </target>
+</proxy>
