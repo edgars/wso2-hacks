@@ -1,0 +1,1 @@
+Don't forget to send the POST with Content-Type: application/xml

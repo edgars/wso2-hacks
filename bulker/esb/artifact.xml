@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="source-conf" groupId="br.com.edgarsilva.bulker.esb.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/source-conf.xml</file>
+    </artifact>
+    <artifact name="destination-conf" groupId="br.com.edgarsilva.bulker.esb.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/destination-conf.xml</file>
+    </artifact>
+    <artifact name="mapping" groupId="br.com.edgarsilva.bulker.esb.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/mapping.xml</file>
+    </artifact>
+    <artifact name="SequenceSetupLoadData" groupId="br.com.edgarsilva.bulker.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SequenceSetupLoadData.xml</file>
+    </artifact>
+    <artifact name="TaskDispathBulk" groupId="br.com.edgarsilva.bulker.esb.task" version="1.0.0" type="synapse/task" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/tasks/TaskDispathBulk.xml</file>
+    </artifact>
+    <artifact name="bulk" groupId="br.com.edgarsilva.bulker.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/bulk.xml</file>
+    </artifact>
+    <artifact name="FilaBulk" groupId="br.com.edgarsilva.bulker.esb.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/FilaBulk.xml</file>
+    </artifact>
+    <artifact name="SequenceParseDescriptor" groupId="br.com.edgarsilva.bulker.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SequenceParseDescriptor.xml</file>
+    </artifact>
+    <artifact name="ParseBulkMessageProcessor" groupId="br.com.edgarsilva.bulker.esb.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-processors/ParseBulkMessageProcessor.xml</file>
+    </artifact>
+</artifacts>

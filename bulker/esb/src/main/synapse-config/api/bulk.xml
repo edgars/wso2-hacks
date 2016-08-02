@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/bulk" name="bulk" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="POST" protocol="http">
+    <inSequence>
+      <sequence key="SequenceSetupLoadData"/>
+      <payloadFactory media-type="xml">
+        <format>
+          <bulkResult>
+           $1
+     </bulkResult>
+        </format>
+        <args>
+          <arg evaluator="xml" expression="get-property('conteudo')"/>
+        </args>
+      </payloadFactory>
+      <log description="LOG"/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence>
+      <send/>
+    </faultSequence>
+  </resource>
+</api>

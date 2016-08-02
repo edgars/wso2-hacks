@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task class="org.apache.synapse.startup.tasks.MessageInjector"
+  group="synapse.simple.quartz" name="TaskDispathBulk" xmlns="http://ws.apache.org/ns/synapse">
+  <trigger interval="120000"/>
+  <property name="message" xmlns:task="http://www.wso2.org/products/wso2commons/tasks">
+    <start>NOW</start>
+  </property>
+  <property name="sequenceName" value="SampleSequence" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
+</task>

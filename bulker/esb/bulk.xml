@@ -1,0 +1,37 @@
+<bulker>
+    <from>
+        <driverClass>com.mysql.jdbc.Driver</driverClass>
+        <url></url>
+        <user></user>
+        <password></password>
+        <object></object>
+        <fields>
+             <field>
+                 <name></name>
+                 <type></type>
+             </field>
+            <field>
+                 <name></name>
+                 <type></type>
+             </field>
+        </fields>
+        <where>NULL</where>
+    </from>
+     <to>
+        <driverClass></driverClass>
+        <url></url>
+        <user></user>
+        <password></password>
+        <object></object>
+        <fields>
+             <field>
+                 <name></name>
+                 <type></type>
+             </field>
+            <field>
+                 <name></name>
+                 <type></type>
+             </field>
+        </fields>
+    </to>
+</bulker>

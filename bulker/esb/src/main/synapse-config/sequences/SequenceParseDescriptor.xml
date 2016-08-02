@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SequenceParseDescriptor" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <property expression="//p:text" name="conteudo" scope="default"
+    type="STRING" xmlns:p="http://ws.apache.org/commons/ns/payload"/>
+  <class name="io.silver.the.bullet.BulkMediator"/>
+  <script description="Log" language="js"><![CDATA[print('metadata var : '+ mc.getProperty('metadata'));]]></script>
+</sequence>

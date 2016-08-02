@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="destination-conf" xmlns="http://ws.apache.org/ns/synapse"><![CDATA[url=xxx
+driverClass=xxxxx
+object=name
+where=clause]]></localEntry>
