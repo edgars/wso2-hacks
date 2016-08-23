@@ -1,0 +1,22 @@
+<data name="StoreDataService" serviceNamespace="br.com.wso2" transports="http">
+    <config id="Sakila">
+        <property name="driverClassName">com.mysql.jdbc.Driver</property>
+        <property name="url">jdbc:mysql://mysql.storage.cloud.wso2.com:3306/app_opengov</property>
+        <property name="username">edgar_TgS0tU4E</property>
+        <property name="password">Edgar123</property>
+    </config>
+    <query id="select_store" useConfig="Sakila">
+        <sql>SELECT a.store_id,b.address,c.city FROM app_opengov.store a, address b , city c where a.address_id=b.address_id and b.city_id=c.city_id</sql>
+        <result element="Stores" rowName="Store">
+            <element column="store_id" name="store_id" exportType="SCALAR" xsdType="xs:string"/>
+            <element column="address" name="address" xsdType="string"/>
+            <element column="city" name="city" xsdType="string"/>
+        </result>
+    </query>
+    <operation name="findAll">
+        <call-query href="select_store"/>
+    </operation>
+    <resource method="GET" path="/store">
+        <call-query href="select_store"/>
+    </resource>
+</data>

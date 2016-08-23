@@ -1,0 +1,26 @@
+<data name="ActorDataService" serviceNamespace="br.com.wso2" transports="http">
+    <query id="select_all_actor" useConfig="Sakila">
+        <sql>SELECT actor_id,first_name,last_name,last_update FROM app_opengov.actor</sql>
+        <result element="Actors" rowName="Actor">
+            <element column="actor_id" name="actor_id" xsdType="string"/>
+            <element column="first_name" name="first_name" xsdType="string"/>
+            <element column="last_name" name="last_name" xsdType="string"/>
+            <element column="last_update" name="last_update" xsdType="string"/>
+        </result>
+    </query>
+    <operation name="findAll">
+        <call-query href="select_all_actor"/>
+    </operation>
+    <resource method="GET" path="/actor">
+        <call-query href="select_all_actor"/>
+    </resource>
+    <config id="Sakila">
+        <property name="org.wso2.ws.dataservice.user">edgar_TgS0tU4E</property>
+        <property name="org.wso2.ws.dataservice.password">Edgar123</property>
+        <property name="org.wso2.ws.dataservice.protocol">jdbc:mysql://mysql.storage.cloud.wso2.com:3306/app_opengov</property>
+        <property name="org.wso2.ws.dataservice.driver">com.mysql.jdbc.Driver</property>
+        <property name="org.wso2.ws.dataservice.minpoolsize">5</property>
+        <property name="org.wso2.ws.dataservice.maxpoolsize">5</property>
+        <property name="org.wso2.ws.dataservice.validation_query">select 1</property>
+    </config>
+</data>

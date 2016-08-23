@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="ActorDataService" groupId="com.example.SakilaDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/ActorDataService.dbs</file>
+    </artifact>
+    <artifact name="FilmDataService" groupId="com.example.SakilaDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/FilmDataService.dbs</file>
+    </artifact>
+    <artifact name="StoreDataService" groupId="com.example.SakilaDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/StoreDataService.dbs</file>
+    </artifact>
+</artifacts>

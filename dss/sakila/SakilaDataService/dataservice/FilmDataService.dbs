@@ -1,0 +1,50 @@
+<data name="FilmDataService" serviceNamespace="br.com.wso2" transports="http">
+    <query id="select_all_films" useConfig="Sakila">
+        <sql>SELECT film_id,title,description,release_year,rental_rate,special_features FROM app_opengov.film</sql>
+        <result element="films" rowName="film">
+            <element column="film_id" name="film_id" xsdType="string"/>
+            <element column="title" name="title" xsdType="string"/>
+            <element column="description" name="description" xsdType="string"/>
+            <element column="release_year" name="release_year" xsdType="string"/>
+            <element column="rental_rate" name="rental_rate" xsdType="string"/>
+            <element column="special_features" name="special_features" xsdType="string"/>
+        </result>
+    </query>
+    <query id="select_film_by_id" useConfig="Sakila">
+        <sql>SELECT film_id,title,description,release_year,rental_rate,special_features FROM app_opengov.film where film_id=:id</sql>
+        <result element="films" rowName="film">
+            <element column="film_id" name="film_id" xsdType="string"/>
+            <element column="title" name="title" xsdType="string"/>
+            <element column="description" name="description" xsdType="string"/>
+            <element column="release_year" name="release_year" xsdType="string"/>
+            <element column="rental_rate" name="rental_rate" xsdType="string"/>
+            <element column="special_features" name="special_features" xsdType="string"/>
+        </result>
+        <param name="id" sqlType="INTEGER"/>
+    </query>
+    <operation name="findAll">
+        <call-query href="select_all_films"/>
+    </operation>
+    <operation name="findById">
+        <call-query href="select_film_by_id">
+            <with-param name="id" query-param="id"/>
+        </call-query>
+    </operation>
+    <resource method="GET" path="/film">
+        <call-query href="select_all_films"/>
+    </resource>
+    <resource method="GET" path="/film/{id}">
+        <call-query href="select_film_by_id">
+            <with-param name="id" query-param="id"/>
+        </call-query>
+    </resource>
+    <config id="Sakila">
+        <property name="org.wso2.ws.dataservice.user">edgar_TgS0tU4E</property>
+        <property name="org.wso2.ws.dataservice.password">Edgar123</property>
+        <property name="org.wso2.ws.dataservice.protocol">jdbc:mysql://mysql.storage.cloud.wso2.com:3306/app_opengov</property>
+        <property name="org.wso2.ws.dataservice.driver">com.mysql.jdbc.Driver</property>
+        <property name="org.wso2.ws.dataservice.minpoolsize">5</property>
+        <property name="org.wso2.ws.dataservice.maxpoolsize">5</property>
+        <property name="org.wso2.ws.dataservice.validation_query">select 1</property>
+    </config>
+</data>
